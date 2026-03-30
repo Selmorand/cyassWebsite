@@ -1,0 +1,500 @@
+COVERASS / CYA PRO -- COMPLETE KNOWLEDGE BASE
+================================================
+
+This document is the comprehensive reference for answering any question about CoverAss (also known as CYA Pro or C-Y-Assets). All information is factual and sourced from official product pages.
+
+
+1. ABOUT COVERASS
+-----------------
+
+CoverAss is a property condition inspection app built for the South African market. It replaces paper checklists used during move-in/move-out inspections, property sales, and maintenance assessments with a professional digital workflow.
+
+Business name: C Y Assets (trading as CoverAss / CYass)
+App name: CoverAss (also referred to as CYA Pro or C-Y-ASSETS)
+Website: cyass.co.za
+App URL: app.cyass.co.za
+Sign up URL: https://app.cyass.co.za/signup
+Login URL: https://app.cyass.co.za/login
+Support email: admin@cyass.co.za
+Tagline: Professional Property Condition Reports
+
+The app digitises the entire property inspection process with GPS verification, timestamps, photo and video evidence, and professional PDF report generation. It is specifically designed for South Africa with SA address formats, SA provinces, Rand pricing, and local payment processing.
+
+
+2. HOW IT WORKS
+---------------
+
+The full workflow has 7 steps:
+
+Step 1 -- Sign Up
+Create an account with your full name, email, password, and role. Choose from Tenant, Landlord, Buyer, Seller, Agent, or Contractor. Google sign-in is also available. Email verification is required before first login. Agents and contractors get 2 free reports. Everyone else gets 1 free report.
+
+Step 2 -- Add a Property
+Enter the property name (e.g. "23 Oak Lane"), property type (House, Townhouse, Flat, Cluster, Cottage, Granny Flat, or Other), and optionally a unit number, complex name, or estate name. Enter the full South African address: street number, street name, suburb, city, province (from all 9 SA provinces), and postal code. GPS coordinates are captured automatically from your device to verify the location. On mobile, device GPS is used (warns if accuracy exceeds 200m). On desktop, network location is used (less accurate, with a "Skip GPS" option).
+
+Step 3 -- Create a Report
+Select a property from your list and add rooms to the report. Each room has a name (e.g. "Main Bedroom") and a type. There are 7 room types: Standard, Bathroom, Kitchen, Patio, Outbuilding, Exterior, and Special Features. Each type has its own predefined inspection categories. Agents can choose which role's inspection template to use (tenant, landlord, buyer, seller, or contractor perspective).
+
+Step 4 -- Inspect Room by Room
+For each room you can optionally record a video walkthrough (max 2 minutes or 50MB; mobile records at 480p, desktop at 720p). Then rate each inspection category's condition using the 5-point scale: Good, Fair, Poor, Urgent Repair, or N/A. Add notes (mandatory if condition is not Good or N/A). Take multiple photos per category (compressed to 1024px JPEG). All data auto-saves every 1.5 seconds. Photo uploads happen immediately. If an upload fails, it queues locally and retries when back online.
+
+Step 5 -- Review and Complete
+The Report Summary page shows property details with GPS, room-by-room condition breakdown (colour-coded green/orange/red), photo thumbnails per category, and overall statistics (total items, condition distribution). Mark the report as "completed."
+
+Step 6 -- Finalize
+This is the locking step. After finalization, the report becomes immutable and cannot be edited. Every room must have at least one inspection item for validation to pass. A finalized_at timestamp is set. This is what makes the report court-ready.
+
+Step 7 -- Generate and Share Your PDF
+A professional A4 PDF is generated on the client side (no server required). The PDF includes company branding, report title, date, status badge, property details card, inspector name and agency, condition overview with statistics and progress bar, room-by-room detail pages with photos, notes, and condition badges, a legal disclaimer, and page numbers. The PDF is uploaded to cloud storage and a download link is saved. The report can also be shared via a public link that requires no login to view.
+
+After generating the PDF, payment is required (unless covered by free tier or active subscription). The system checks for an active subscription, remaining free reports, or prior payment. If payment is needed, the user is redirected to Yoco. After payment, the report status updates to "paid" and the PDF becomes accessible.
+
+
+3. USER ROLES
+-------------
+
+There are 6 distinct user roles:
+
+TENANT
+Who they are: Renters moving in or out.
+Why they use CoverAss: Protect their deposit by documenting the exact condition of the property on move-in day and move-out day. If there is a dispute, the report serves as timestamped, GPS-verified, photo evidence in a professional PDF.
+Free reports: 1.
+
+LANDLORD
+Who they are: Property owners or managers.
+Why they use CoverAss: Track property condition between tenants, prove damage, and manage maintenance with evidence.
+Free reports: 1.
+
+BUYER
+Who they are: People purchasing property.
+Why they use CoverAss: Pre-purchase due diligence. Document defects before signing so there are no surprises.
+Free reports: 1.
+
+SELLER
+Who they are: People selling property.
+Why they use CoverAss: Disclosure reports that prove condition at time of sale, reducing disputes and protecting the seller.
+Free reports: 1.
+
+AGENT
+Who they are: Real estate professionals.
+Why they use CoverAss: Create reports on behalf of any client using any template. This is their primary inspection tool. They can use tenant, landlord, buyer, seller, or contractor inspection templates. Team management included.
+Free reports: 2.
+Agent Pro subscription available at R499/month for unlimited reports.
+
+CONTRACTOR
+Who they are: Builders, plumbers, electricians, and other tradespeople.
+Why they use CoverAss: Document repair and maintenance work with before/after evidence for quoting and sign-off.
+Free reports: 2.
+Agent Pro subscription available at R499/month for unlimited reports.
+
+Primary target users: Agents and Contractors (power users and subscription revenue drivers).
+Secondary target users: Tenants (highest volume of individual users).
+
+
+4. INSPECTION CATEGORIES BY ROOM TYPE
+--------------------------------------
+
+Each room type has predefined inspection categories:
+
+STANDARD ROOM (Bedroom, Living Room, etc.)
+- Walls
+- Windows
+- Carpets/Floors
+- Doors
+- Ceiling
+- Light Fittings
+- Power Points
+
+BATHROOM
+- Walls
+- Floors
+- Basin
+- Toilet
+- Shower/Bath
+- Taps/Plumbing
+- Ventilation
+- Light Fittings
+
+KITCHEN
+- Walls
+- Windows
+- Floors
+- Cabinets
+- Countertops
+- Sink
+- Appliances
+- Plumbing
+- Light Fittings
+- Electrical Points
+
+PATIO
+- Surface
+- Railings
+- Roofing/Cover
+- Drainage
+- Lighting
+
+OUTBUILDING
+- Structure
+- Roofing
+- Walls
+- Doors/Windows
+- Flooring
+- Electrical
+- Other
+
+EXTERIOR
+- Roof
+- Gutters
+- External Walls
+- Garden/Lawn
+- Driveway
+- Fencing
+- Security Features
+
+SPECIAL FEATURES
+- Solar Power
+- Backup Power (generator/UPS)
+- Water Systems (borehole/JoJo tanks)
+- Irrigation
+- Pool and Equipment
+- Security Systems (alarms/cameras/electric fence)
+- Air Conditioning
+- Gas Installations
+- Smart Home Features
+- Other
+
+
+5. CONDITION RATING SYSTEM
+---------------------------
+
+Every inspection item is rated on a 5-point scale:
+
+GOOD (green, colour code #277020)
+Meaning: No issues, acceptable condition. No comment required.
+
+FAIR (amber, colour code #f5a409)
+Meaning: Minor wear, cosmetic issues. A written comment is required explaining the issue.
+
+POOR (red, colour code #c62121)
+Meaning: Significant damage or deterioration. A written comment is required explaining the issue.
+
+URGENT REPAIR (red, colour code #c62121)
+Meaning: Immediate attention needed. A written comment is required explaining the issue.
+
+N/A (grey, colour code #777777)
+Meaning: Not applicable to this property. No comment required.
+
+Rule: Any rating other than Good or N/A requires a mandatory written comment explaining the issue.
+
+
+6. PRICING
+----------
+
+All prices are in ZAR (South African Rand).
+
+FREE TIER
+- Tenants: 1 free report
+- Landlords: 1 free report
+- Buyers: 1 free report
+- Sellers: 1 free report
+- Agents: 2 free reports
+- Contractors: 2 free reports
+- No credit card required to sign up.
+- Includes all features: photo evidence, video walkthroughs, PDF generation, GPS verification, shareable public links.
+- Does NOT include team management.
+
+PAY-PER-REPORT
+- Price: R99 per report.
+- Available to all roles after the free tier is used up.
+- Includes all features: photo evidence, video walkthroughs, PDF generation, GPS verification, shareable public links.
+- Does NOT include team management.
+
+AGENT PRO SUBSCRIPTION
+- Price: R499 per month.
+- Unlimited reports.
+- 3 team members included.
+- Additional team members: R100/month each (planned feature).
+- Access to any role's inspection template.
+- Available to Agents and Contractors only.
+- Includes all features plus team management.
+- Subscriptions renew monthly unless cancelled.
+- Can be cancelled at any time; access continues until end of current billing period.
+
+What team members get: Team members share the subscription owner's active subscription. They can create unlimited reports without paying separately.
+
+
+7. PAYMENT
+-----------
+
+Payment provider: Yoco (https://www.yoco.com) -- the dominant South African online payment processor.
+
+Accepted payment methods: Credit card, debit card, Google Pay, Apple Pay (all via Yoco).
+
+Payment flow:
+1. User completes and finalizes a report.
+2. The app checks if the user has an active subscription, free reports remaining, or has already paid for this report.
+3. If payment is needed, the app creates a Yoco checkout session via a Cloud Function.
+4. The user is redirected to Yoco to complete payment.
+5. A webhook confirms the payment.
+6. The app updates the report status to "paid" and the PDF becomes accessible.
+
+Payment information is processed securely by Yoco and is NOT stored on CoverAss servers.
+
+Payments are non-refundable once a report PDF has been generated.
+
+
+8. FEATURES
+------------
+
+OFFLINE SUPPORT
+The app works fully offline. Data is saved locally using IndexedDB and syncs automatically when the user is back online. This is critical for South Africa where connectivity can be unreliable.
+
+GPS VERIFICATION
+Device GPS coordinates are recorded during property creation to verify the inspection location. On mobile, device GPS is used. On desktop, network location is used. GPS data is included in reports and is not used for tracking purposes outside of inspections.
+
+PHOTO EVIDENCE
+Multiple photos can be taken per inspection item. Photos are automatically compressed to 1024px JPEG format. Photos upload immediately; if upload fails, they queue locally and retry when back online.
+
+VIDEO WALKTHROUGHS
+An optional video walkthrough can be recorded for each room. Maximum length is 2 minutes or 50MB. Mobile records at 480p resolution. Desktop records at 720p resolution.
+
+PROFESSIONAL PDF REPORTS
+A branded A4 PDF is generated on the client side (no server required). Includes company branding, property details, inspector name and agency, condition overview with statistics, room-by-room detail pages with photos and notes, condition badges, a legal disclaimer, and page numbers. The PDF is uploaded to cloud storage.
+
+SHAREABLE PUBLIC LINKS
+Every finalized report gets a shareable public link. Anyone can view the report without needing a CoverAss account or login.
+
+AUTO-SAVE
+All data auto-saves every 1.5 seconds. There is no manual "save" button needed.
+
+TEAM MANAGEMENT (Agents and Contractors only)
+Invite team members by email (up to 3 included with Agent Pro). Team members share the owner's subscription and can create unlimited reports. If an invited email has not signed up yet, they auto-link to the team on signup.
+
+REPORT STATUS LIFECYCLE
+Reports progress through these stages:
+- Draft: Active editing, rooms and items being added.
+- Completed: All rooms inspected, can still edit.
+- Finalized: Locked and immutable, timestamp set.
+- Paid: Payment confirmed, PDF accessible.
+
+
+9. PLATFORM AVAILABILITY
+-------------------------
+
+WEB (PWA) -- Live
+Works on any modern browser. Installable as an app on mobile devices. Full offline support.
+
+ANDROID -- Built
+Capacitor-wrapped native app with native camera access. App ID: co.za.cyass.coverass.
+
+iOS -- Planned
+The PWA works on Safari. A native iOS app has not yet been built.
+
+The app works on phones, tablets, and desktops. No special equipment is required -- just a modern smartphone or computer.
+
+
+10. PRIVACY AND DATA
+---------------------
+
+DATA STORAGE
+All data is stored securely on Google Cloud infrastructure (Firebase) in the europe-west1 region. Photos and videos are stored in Firebase Storage under the user's account. Data is encrypted in transit and at rest.
+
+DATA COLLECTED
+- Account details: full name, email address, role, and optionally agency name.
+- Property details: addresses, property types, and GPS coordinates captured during inspections.
+- Inspection data: condition ratings, notes, photos, and videos uploaded by the user.
+- Payment information is processed by Yoco and is NOT stored on CoverAss servers.
+
+DATA USAGE
+Data is used solely to provide the CoverAss service: creating property inspection reports, generating PDFs, and enabling report sharing. CoverAss does not sell data to third parties.
+
+GPS DATA
+GPS coordinates are captured during property creation to verify inspection location. This data is included in reports and is not used for tracking outside of inspections.
+
+POPIA COMPLIANCE
+CoverAss is compliant with the Protection of Personal Information Act (POPIA), South Africa's data privacy law. Users have the right to access, correct, and request deletion of their personal data.
+
+DATA DELETION
+Users can request deletion of their account and all associated data by contacting admin@cyass.co.za. Requests are processed within 30 days.
+
+
+11. TERMS AND CONDITIONS
+--------------------------
+
+SERVICE PROVIDER
+CoverAss is provided by C Y Assets.
+
+NATURE OF SERVICE
+CoverAss is a property condition inspection tool. Reports are user-generated. CoverAss provides the platform but is not the inspector. The accuracy and completeness of inspection reports is the responsibility of the user creating the report.
+
+SOLO REPORTS
+Reports generated without a professional inspector present carry a "solo report" disclaimer on the PDF. This does not reduce the validity of the report but indicates it was self-conducted.
+
+REPORT FINALIZATION
+Once finalized, reports become immutable by design. They are timestamped and locked to serve as reliable evidence. Finalized reports cannot be edited or deleted.
+
+PAYMENTS
+Payments are processed via Yoco. Payment is required before accessing the final PDF (unless covered by free tier or active subscription). Payments are non-refundable once a report PDF has been generated.
+
+SUBSCRIPTIONS
+Agent Pro (R499/month) provides unlimited reports and team management. Subscriptions renew monthly unless cancelled. Team members share the subscription owner's plan.
+
+USER ACCOUNTS
+Users are responsible for maintaining the security of their account credentials. Accurate information must be provided during registration. CoverAss reserves the right to suspend accounts that violate the terms.
+
+INTELLECTUAL PROPERTY
+The CoverAss application, its design, and code are the property of C Y Assets. Reports and inspection data created by users belong to the user.
+
+LIMITATION OF LIABILITY
+CoverAss is provided "as is." C Y Assets is not liable for any disputes, damages, or losses arising from the use of reports generated through the platform. Users should seek professional advice for legal matters.
+
+CHANGES TO TERMS
+Terms may be updated from time to time. Continued use of the service after changes constitutes acceptance of the updated terms.
+
+
+12. ROLE COMPARISON MATRIX
+----------------------------
+
+This table shows which inspection categories apply to each role. Y means Yes (included), O means Optional, and - means Not Applicable.
+
+Category                          | Tenant | Landlord | Buyer | Seller | Agent | Contractor
+----------------------------------|--------|----------|-------|--------|-------|------------
+Standard Rooms                    |   Y    |    Y     |   Y   |   Y    |   Y   |     Y
+Bathroom Systems                  |   Y    |    Y     |   Y   |   Y    |   Y   |     Y
+Kitchen Systems                   |   Y    |    Y     |   Y   |   Y    |   Y   |     Y
+Exterior                          |   Y    |    Y     |   Y   |   Y    |   Y   |     Y
+Special Features                  |   O    |    Y     |   Y   |   Y    |   Y   |     Y
+Meter Evidence                    |   Y    |    Y     |   Y   |   Y    |   Y   |     O
+Keys & Access                     |   Y    |    Y     |   O   |   O    |   O   |     -
+Compliance Documents              |   -    |    O     |   Y   |   Y    |   Y   |     Y
+Structural Indicators             |   -    |    O     |   Y   |   Y    |   Y   |     Y
+Damp / Moisture                   |   Y    |    Y     |   Y   |   Y    |   Y   |     Y
+Appliance Serial Numbers          |   O    |    Y     |   Y   |   Y    |   Y   |     O
+Safety Systems                    |   O    |    Y     |   Y   |   Y    |   Y   |     Y
+Marketing Photos                  |   -    |    -     |   O   |   Y    |   Y   |     -
+Repair Recommendations            |   -    |    Y     |   Y   |   O    |   Y   |     Y
+Before/After Repairs              |   -    |    O     |   O   |   O    |   O   |     Y
+Electrical COC                    |   -    |    O     |   Y   |   Y    |   Y   |     Y
+Gas COC                           |   -    |    O     |   Y   |   Y    |   Y   |     Y
+Plumbing COC                      |   -    |    O     |   Y   |   Y    |   Y   |     Y
+Beetle Certificate                |   -    |    -     |   Y   |   Y    |   Y   |     O
+Water Installation Certificate    |   -    |    O     |   Y   |   Y    |   Y   |     O
+Electric Fence Certificate        |   -    |    O     |   Y   |   Y    |   Y   |     Y
+Building Plans                    |   -    |    O     |   Y   |   Y    |   Y   |     O
+Occupation Certificate            |   -    |    O     |   Y   |   Y    |   Y   |     O
+Warranty Documents                |   -    |    O     |   O   |   O    |   O   |     Y
+
+Key:
+Y = Yes, this category is included in the role's inspection by default.
+O = Optional, the user can include this category if relevant.
+- = Not applicable for this role.
+
+
+13. FREQUENTLY ASKED QUESTIONS
+-------------------------------
+
+Q: What is CoverAss?
+A: CoverAss is a property condition inspection app built for South Africa. It replaces paper checklists with digital, GPS-verified, timestamped reports that include photo and video evidence, and generates professional PDF reports.
+
+Q: Who makes CoverAss?
+A: CoverAss is provided by C Y Assets.
+
+Q: Is my first report really free?
+A: Yes. Every new user gets at least 1 free report. Agents and contractors get 2 free reports. No credit card is required to sign up.
+
+Q: How much does it cost after the free reports?
+A: Individual reports cost R99 each (pay-per-report). Agents and contractors can subscribe to Agent Pro at R499/month for unlimited reports, team management, and access to all inspection templates.
+
+Q: What payment methods are accepted?
+A: Payments are processed through Yoco. Credit cards, debit cards, Google Pay, and Apple Pay are all supported.
+
+Q: Can I get a refund?
+A: Payments are non-refundable once a report PDF has been generated.
+
+Q: Can I cancel my subscription?
+A: Yes. Agent Pro subscriptions can be cancelled at any time. Your access continues until the end of your current billing period.
+
+Q: Does it work offline?
+A: Yes. CoverAss works fully offline and syncs your data automatically when you are back online. This is designed for areas with poor connectivity.
+
+Q: Can I share reports with others?
+A: Yes. Every finalized report gets a shareable public link. Anyone can view it without needing a CoverAss account or login.
+
+Q: What devices does it work on?
+A: CoverAss works on any modern smartphone, tablet, or computer via the web browser (PWA). There is also a native Android app. An iOS native app is planned, but the PWA works on Safari in the meantime.
+
+Q: Do I need special equipment?
+A: No. Just a modern smartphone or computer with a camera.
+
+Q: What is a "solo report"?
+A: A solo report is one created without a professional inspector present. The PDF will carry a "solo report" disclaimer. This does not reduce the validity of the report.
+
+Q: Can I edit a report after finalizing it?
+A: No. Finalized reports are immutable by design. They are locked and timestamped to serve as reliable evidence. This is what makes them court-ready.
+
+Q: Where is my data stored?
+A: All data is stored on Google Cloud infrastructure (Firebase) in the europe-west1 region (Europe). Data is encrypted in transit and at rest.
+
+Q: Is CoverAss POPIA compliant?
+A: Yes. CoverAss is compliant with the Protection of Personal Information Act (POPIA). Users can access, correct, and request deletion of their personal data.
+
+Q: How do I delete my account and data?
+A: Contact admin@cyass.co.za to request deletion of your account and all associated data. Requests are processed within 30 days.
+
+Q: What is Agent Pro?
+A: Agent Pro is a subscription plan at R499/month designed for real estate agents and contractors. It includes unlimited reports, 3 team members, and access to all inspection templates.
+
+Q: How does team management work?
+A: Agent Pro subscribers can invite up to 3 team members by email. Team members share the owner's subscription and can create unlimited reports without paying separately. If an invited person has not signed up yet, they auto-link to the team when they do sign up.
+
+Q: Can additional team members be added beyond 3?
+A: Additional team members at R100/month each is a planned feature.
+
+Q: What roles can I choose from?
+A: Tenant, Landlord, Buyer, Seller, Agent, or Contractor. Each role gets a tailored inspection checklist.
+
+Q: Can agents use different inspection templates?
+A: Yes. Agents (and only agents) can choose from any role's inspection template when creating a report -- tenant, landlord, buyer, seller, or contractor.
+
+Q: What condition ratings are available?
+A: Good (no issues), Fair (minor wear, comment required), Poor (significant damage, comment required), Urgent Repair (immediate attention needed, comment required), and N/A (not applicable).
+
+Q: Are photos required?
+A: Photos are not strictly required, but are strongly recommended as they provide evidence. Multiple photos can be taken per inspection item.
+
+Q: What video specifications are supported?
+A: Video walkthroughs can be up to 2 minutes or 50MB. Mobile records at 480p; desktop at 720p.
+
+Q: How does GPS verification work?
+A: GPS coordinates are automatically captured from your device when you add a property. On mobile, the device GPS is used. On desktop, network location is used. The coordinates are included in the report to verify the inspection location.
+
+Q: What property types are supported?
+A: House, Townhouse, Flat, Cluster, Cottage, Granny Flat, and Other.
+
+Q: How do I sign up?
+A: Go to https://app.cyass.co.za/signup and create an account with your name, email, password, and role. Google sign-in is also available.
+
+Q: Is CoverAss only for South Africa?
+A: CoverAss is built specifically for the South African market, with SA address formats, SA provinces, Rand pricing, and Yoco payments. However, it can technically be accessed from anywhere.
+
+Q: How fast is the PDF generated?
+A: The PDF is generated on the client side (in your browser), so it is nearly instant. No server processing is required.
+
+Q: What is the report status lifecycle?
+A: Reports go through these stages: Draft (actively editing), Completed (all rooms inspected, still editable), Finalized (locked and immutable), Paid (payment confirmed, PDF accessible).
+
+
+14. CONTACT AND SUPPORT
+-------------------------
+
+For any questions, issues, or feedback:
+Email: admin@cyass.co.za
+Website: cyass.co.za
+App: app.cyass.co.za
+
+For privacy-related enquiries: admin@cyass.co.za
+For terms-related questions: admin@cyass.co.za
+For data deletion requests: admin@cyass.co.za (processed within 30 days)
+
+Copyright C Y Assets. All rights reserved.

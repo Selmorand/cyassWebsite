@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roles - CoverAss</title>
+  <meta name="description" content="See what each role inspects. CoverAss supports tenants, landlords, buyers, sellers, agents, and contractors with tailored inspection checklists.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <style>
+    /* ===== ROLES PAGE SPECIFIC ===== */
+    .cyass-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .cyass-controls label {
+      font-weight: 600;
+      color: #0c0e43;
+    }
+    .cyass-controls select {
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 2px solid #e7ebee;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: #0c0e43;
+      background: #fff;
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+    }
+    .cyass-controls select:focus {
+      outline: none;
+      border-color: #88cb11;
+    }
+
+    .cyass-role-info {
+      background: #f7fafd;
+      border-left: 4px solid #0c0e43;
+      padding: 16px 20px;
+      margin-bottom: 28px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Table */
+    .table-wrapper { overflow-x: auto; }
+    .cyass-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .cyass-table th {
+      background: #0c0e43;
+      color: #fff;
+      padding: 12px 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .cyass-table th:first-child {
+      text-align: left;
+      border-radius: 8px 0 0 0;
+    }
+    .cyass-table th:last-child {
+      border-radius: 0 8px 0 0;
+    }
+    .cyass-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e7ebee;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    .cyass-table td:first-child {
+      text-align: left;
+      font-weight: 500;
+      color: #333;
+    }
+    .cyass-table tr:hover td { background: #f3f5f7; }
+
+    /* Status colours */
+    .yes { color: #88cb11; font-weight: 600; }
+    .opt { color: #f5a409; font-weight: 600; }
+    .na  { color: #bbb; font-style: italic; }
+
+    /* Active column highlight */
+    .active-col { background: rgba(12, 14, 67, 0.06); }
+
+    /* Mobile cards */
+    .cyass-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #e7ebee;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 10px;
+      background: #fff;
+    }
+    .cyass-card .title {
+      font-weight: 600;
+      color: #0c0e43;
+      font-size: 0.95rem;
+    }
+    .cyass-card .badge {
+      font-size: 0.85rem;
+      padding: 4px 12px;
+      border-radius: 12px;
+    }
+    .cyass-card .badge.yes { background: rgba(136,203,17,0.12); }
+    .cyass-card .badge.opt { background: rgba(245,164,9,0.12); }
+
+    .desktop-only { display: block; }
+    .mobile-only  { display: none; }
+
+    @media (max-width: 768px) {
+      .desktop-only { display: none; }
+      .mobile-only  { display: block; }
+    }
+
+    /* Role cards grid */
+    .roles-overview {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .roles-overview .role-card {
+      text-align: center;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .roles-overview .role-card:hover,
+    .roles-overview .role-card.active {
+      border-color: #88cb11;
+      border-top-color: #88cb11;
+    }
+    @media (max-width: 768px) {
+      .roles-overview { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container">
+      <a href="/" class="logo"><img src="images/cyass.png" alt="CYA Pro"></a>
+      <nav class="nav">
+        <ul class="nav__links">
+          <li><a href="/">Home</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="roles.html">Roles</a></li>
+          <li><a href="agents.html">For Agents</a></li>
+          <li><a href="tenants.html">For Tenants</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+        <a href="https://app.cyass.co.za/signup" class="btn btn--lime btn--sm">Start Free</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <div class="nav--mobile" id="mobileNav">
+      <a href="/">Home</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="roles.html">Roles</a>
+      <a href="agents.html">For Agents</a>
+      <a href="tenants.html">For Tenants</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="https://app.cyass.co.za/signup" class="btn btn--lime">Start Free</a>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <h1>Inspection Roles</h1>
+    <p>See what each role inspects. Tailored checklists for every scenario.</p>
+  </section>
+
+  <!-- Role Cards Overview -->
+  <section class="section section--white">
+    <div class="container">
+      <h2 class="section-title">Who Uses CoverAss?</h2>
+      <p class="section-subtitle">Six roles, six perspectives. Each with a tailored inspection workflow.</p>
+      <div class="roles-overview">
+        <div class="role-card" data-select-role="tenant">
+          <div class="role-card__icon">&#128100;</div>
+          <h3>Tenants</h3>
+          <p>Protect your deposit. Document condition at move-in and move-out.</p>
+        </div>
+        <div class="role-card" data-select-role="landlord">
+          <div class="role-card__icon">&#127969;</div>
+          <h3>Landlords</h3>
+          <p>Track property condition between tenants. Prove damage with evidence.</p>
+        </div>
+        <div class="role-card" data-select-role="buyer">
+          <div class="role-card__icon">&#128176;</div>
+          <h3>Buyers</h3>
+          <p>Pre-purchase due diligence. Identify defects before signing.</p>
+        </div>
+        <div class="role-card" data-select-role="seller">
+          <div class="role-card__icon">&#128181;</div>
+          <h3>Sellers</h3>
+          <p>Disclosure reports. Prove condition at sale to reduce disputes.</p>
+        </div>
+        <div class="role-card" data-select-role="agent">
+          <div class="role-card__icon">&#128188;</div>
+          <h3>Agents</h3>
+          <p>Professional reports for any client using any template.</p>
+        </div>
+        <div class="role-card" data-select-role="contractor">
+          <div class="role-card__icon">&#128295;</div>
+          <h3>Contractors</h3>
+          <p>Document repairs with before/after evidence for quoting and sign-off.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="section section--light">
+    <div class="container">
+      <h2 class="section-title">Inspection Comparison</h2>
+      <p class="section-subtitle">See which categories apply to each role.</p>
+
+      <div class="cyass-controls">
+        <label>Select Role:</label>
+        <select id="roleFilter">
+          <option value="tenant">Tenant</option>
+          <option value="landlord">Landlord</option>
+          <option value="buyer">Buyer</option>
+          <option value="seller">Seller</option>
+          <option value="agent">Agent</option>
+          <option value="contractor">Contractor</option>
+        </select>
+      </div>
+
+      <div id="roleInfo" class="cyass-role-info"></div>
+
+      <!-- Desktop Table -->
+      <div class="table-wrapper desktop-only">
+        <table class="cyass-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th data-role="tenant">Tenant</th>
+              <th data-role="landlord">Landlord</th>
+              <th data-role="buyer">Buyer</th>
+              <th data-role="seller">Seller</th>
+              <th data-role="agent">Agent</th>
+              <th data-role="contractor">Contractor</th>
+            </tr>
+          </thead>
+          <tbody id="cyassTable"></tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Cards -->
+      <div id="cyassCards" class="mobile-only"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Find Your Role &amp; Get Started</h2>
+      <p>Your first report is free. No credit card required.</p>
+      <a href="https://app.cyass.co.za/signup" class="btn btn--lime">Get Started Free</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/" class="logo"><img src="images/cyass.png" alt="CYA Pro"></a>
+          <p>Professional property condition reports for the South African market.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Product</h4>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="roles.html">Roles</a>
+          <a href="agents.html">For Agents</a>
+          <a href="tenants.html">For Tenants</a>
+        </div>
+        <div class="footer__links">
+          <h4>Legal</h4>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact</h4>
+          <p>admin@cyass.co.za</p>
+          <p>cyass.co.za</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 C Y Assets. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll
+    window.addEventListener('scroll', function() { document.getElementById('header').classList.toggle('header--scrolled', window.scrollY > 10); });
+    // Mobile nav
+    document.getElementById('navToggle').addEventListener('click', function() { document.getElementById('mobileNav').classList.toggle('active'); });
+    document.querySelectorAll('#mobileNav a').forEach(function(a) { a.addEventListener('click', function() { document.getElementById('mobileNav').classList.remove('active'); }); });
+
+    // ===== Roles comparison logic (from ss/roles.html) =====
+    var roles = ['tenant','landlord','buyer','seller','agent','contractor'];
+
+    var roleDescriptions = {
+      tenant: 'Tenants inspect the property at move-in and move-out to protect their deposit and avoid disputes.',
+      landlord: 'Landlords inspect properties to track condition, maintenance, and tenant compliance.',
+      buyer: 'Buyers inspect a property before transfer to identify defects, risks, and compliance issues.',
+      seller: 'Sellers document property condition to support transparency and avoid legal disputes.',
+      agent: 'Agents conduct inspections to support transactions and provide professional reports.',
+      contractor: 'Contractors inspect and document repairs, maintenance, and before/after work.'
+    };
+
+    var data = [
+      ['Standard Rooms','Y','Y','Y','Y','Y','Y'],
+      ['Bathroom Systems','Y','Y','Y','Y','Y','Y'],
+      ['Kitchen Systems','Y','Y','Y','Y','Y','Y'],
+      ['Exterior','Y','Y','Y','Y','Y','Y'],
+      ['Special Features','O','Y','Y','Y','Y','Y'],
+      ['Meter Evidence','Y','Y','Y','Y','Y','O'],
+      ['Keys & Access','Y','Y','O','O','O','-'],
+      ['Compliance Documents','-','O','Y','Y','Y','Y'],
+      ['Structural Indicators','-','O','Y','Y','Y','Y'],
+      ['Damp / Moisture','Y','Y','Y','Y','Y','Y'],
+      ['Appliance Serial Numbers','O','Y','Y','Y','Y','O'],
+      ['Safety Systems','O','Y','Y','Y','Y','Y'],
+      ['Marketing Photos','-','-','O','Y','Y','-'],
+      ['Repair Recommendations','-','Y','Y','O','Y','Y'],
+      ['Before/After Repairs','-','O','O','O','O','Y'],
+      ['Electrical COC','-','O','Y','Y','Y','Y'],
+      ['Gas COC','-','O','Y','Y','Y','Y'],
+      ['Plumbing COC','-','O','Y','Y','Y','Y'],
+      ['Beetle Certificate','-','-','Y','Y','Y','O'],
+      ['Water Installation Certificate','-','O','Y','Y','Y','O'],
+      ['Electric Fence Certificate','-','O','Y','Y','Y','Y'],
+      ['Building Plans','-','O','Y','Y','Y','O'],
+      ['Occupation Certificate','-','O','Y','Y','Y','O'],
+      ['Warranty Documents','-','O','O','O','O','Y']
+    ];
+
+    function getDisplay(val) { return val === 'Y' ? 'Yes' : val === 'O' ? 'Optional' : 'N/A'; }
+    function getClass(val) { return val === 'Y' ? 'yes' : val === 'O' ? 'opt' : 'na'; }
+
+    function render(role) {
+      // Description
+      document.getElementById('roleInfo').innerText = roleDescriptions[role];
+
+      // Table
+      var table = document.getElementById('cyassTable');
+      table.innerHTML = '';
+      data.forEach(function(row) {
+        var html = '<tr><td>' + row[0] + '</td>';
+        row.slice(1).forEach(function(val, i) {
+          html += '<td class="' + getClass(val) + '" data-role="' + roles[i] + '">' + getDisplay(val) + '</td>';
+        });
+        html += '</tr>';
+        table.innerHTML += html;
+      });
+
+      // Highlight column
+      document.querySelectorAll('th[data-role], td[data-role]').forEach(function(el) { el.classList.remove('active-col'); });
+      document.querySelectorAll('[data-role="' + role + '"]').forEach(function(el) { el.classList.add('active-col'); });
+
+      // Mobile cards
+      var cards = document.getElementById('cyassCards');
+      cards.innerHTML = '';
+      var roleIndex = roles.indexOf(role) + 1;
+      data.forEach(function(row) {
+        var val = row[roleIndex];
+        if (val === '-') return;
+        cards.innerHTML += '<div class="cyass-card"><div class="title">' + row[0] + '</div><div class="badge ' + getClass(val) + '">' + getDisplay(val) + '</div></div>';
+      });
+
+      // Highlight role card
+      document.querySelectorAll('[data-select-role]').forEach(function(el) { el.classList.remove('active'); });
+      var activeCard = document.querySelector('[data-select-role="' + role + '"]');
+      if (activeCard) activeCard.classList.add('active');
+    }
+
+    // Dropdown change
+    document.getElementById('roleFilter').addEventListener('change', function(e) { render(e.target.value); });
+
+    // Role card clicks
+    document.querySelectorAll('[data-select-role]').forEach(function(card) {
+      card.addEventListener('click', function() {
+        var role = this.getAttribute('data-select-role');
+        document.getElementById('roleFilter').value = role;
+        render(role);
+        document.querySelector('.cyass-controls').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Initial
+    render('tenant');
+  </script>
+
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

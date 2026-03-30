@@ -1,0 +1,264 @@
+<div class="cyass-wrapper">
+  <!-- Role Selector -->
+  <div class="cyass-controls">
+    <label><strong>Select Role:</strong></label>
+    <select id="roleFilter">
+      <option value="tenant">Tenant</option>
+      <option value="landlord">Landlord</option>
+      <option value="buyer">Buyer</option>
+      <option value="seller">Seller</option>
+      <option value="agent">Agent</option>
+      <option value="contractor">Contractor</option>
+    </select>
+  </div>
+
+  <!-- Role Description -->
+  <div id="roleInfo" class="cyass-role-info"></div>
+
+  <!-- Desktop Table -->
+  <div class="table-wrapper desktop-only">
+    <table class="cyass-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th data-role="tenant">Tenant</th>
+          <th data-role="landlord">Landlord</th>
+          <th data-role="buyer">Buyer</th>
+          <th data-role="seller">Seller</th>
+          <th data-role="agent">Agent</th>
+          <th data-role="contractor">Contractor</th>
+        </tr>
+      </thead>
+      <tbody id="cyassTable"></tbody>
+    </table>
+  </div>
+
+  <!-- Mobile Cards -->
+  <div id="cyassCards" class="mobile-only"></div>
+</div>
+
+<script>
+  const roles = [
+    "tenant",
+    "landlord",
+    "buyer",
+    "seller",
+    "agent",
+    "contractor",
+  ];
+
+  const roleDescriptions = {
+    tenant:
+      "Tenants inspect the property at move-in and move-out to protect their deposit and avoid disputes.",
+    landlord:
+      "Landlords inspect properties to track condition, maintenance, and tenant compliance.",
+    buyer:
+      "Buyers inspect a property before transfer to identify defects, risks, and compliance issues.",
+    seller:
+      "Sellers document property condition to support transparency and avoid legal disputes.",
+    agent:
+      "Agents conduct inspections to support transactions and provide professional reports.",
+    contractor:
+      "Contractors inspect and document repairs, maintenance, and before/after work.",
+  };
+
+  const data = [
+    ["Standard Rooms", "Y", "Y", "Y", "Y", "Y", "Y"],
+    ["Bathroom Systems", "Y", "Y", "Y", "Y", "Y", "Y"],
+    ["Kitchen Systems", "Y", "Y", "Y", "Y", "Y", "Y"],
+    ["Exterior", "Y", "Y", "Y", "Y", "Y", "Y"],
+    ["Special Features", "O", "Y", "Y", "Y", "Y", "Y"],
+    ["Meter Evidence", "Y", "Y", "Y", "Y", "Y", "O"],
+    ["Keys & Access", "Y", "Y", "O", "O", "O", "-"],
+    ["Compliance Documents", "-", "O", "Y", "Y", "Y", "Y"],
+    ["Structural Indicators", "-", "O", "Y", "Y", "Y", "Y"],
+    ["Damp / Moisture", "Y", "Y", "Y", "Y", "Y", "Y"],
+    ["Appliance Serial Numbers", "O", "Y", "Y", "Y", "Y", "O"],
+    ["Safety Systems", "O", "Y", "Y", "Y", "Y", "Y"],
+    ["Marketing Photos", "-", "-", "O", "Y", "Y", "-"],
+    ["Repair Recommendations", "-", "Y", "Y", "O", "Y", "Y"],
+    ["Before/After Repairs", "-", "O", "O", "O", "O", "Y"],
+    ["Electrical COC", "-", "O", "Y", "Y", "Y", "Y"],
+    ["Gas COC", "-", "O", "Y", "Y", "Y", "Y"],
+    ["Plumbing COC", "-", "O", "Y", "Y", "Y", "Y"],
+    ["Beetle Certificate", "-", "-", "Y", "Y", "Y", "O"],
+    ["Water Installation Certificate", "-", "O", "Y", "Y", "Y", "O"],
+    ["Electric Fence Certificate", "-", "O", "Y", "Y", "Y", "Y"],
+    ["Building Plans", "-", "O", "Y", "Y", "Y", "O"],
+    ["Occupation Certificate", "-", "O", "Y", "Y", "Y", "O"],
+    ["Warranty Documents", "-", "O", "O", "O", "O", "Y"],
+  ];
+
+  function getDisplay(val) {
+    return val === "Y" ? "Yes" : val === "O" ? "Optional" : "N/A";
+  }
+
+  function getClass(val) {
+    return val === "Y" ? "yes" : val === "O" ? "opt" : "na";
+  }
+
+  function updateRoleInfo(role) {
+    document.getElementById("roleInfo").innerText = roleDescriptions[role];
+  }
+
+  function highlightColumn(role) {
+    document.querySelectorAll("th[data-role], td[data-role]").forEach((el) => {
+      el.classList.remove("active-col");
+    });
+
+    document.querySelectorAll(`[data-role="${role}"]`).forEach((el) => {
+      el.classList.add("active-col");
+    });
+  }
+
+  function render(role) {
+    // Update description
+    updateRoleInfo(role);
+
+    // TABLE
+    const table = document.getElementById("cyassTable");
+    table.innerHTML = "";
+
+    data.forEach((row) => {
+      let html = `<tr><td>${row[0]}</td>`;
+
+      row.slice(1).forEach((val, i) => {
+        const roleName = roles[i];
+        html += `<td class="${getClass(val)}" data-role="${roleName}">${getDisplay(val)}</td>`;
+      });
+
+      html += "</tr>";
+      table.innerHTML += html;
+    });
+
+    // Highlight selected role column
+    highlightColumn(role);
+
+    // MOBILE CARDS
+    const cards = document.getElementById("cyassCards");
+    cards.innerHTML = "";
+
+    const roleIndex = roles.indexOf(role) + 1;
+
+    data.forEach((row) => {
+      const val = row[roleIndex];
+      if (val === "-") return;
+
+      cards.innerHTML += `
+      <div class="cyass-card">
+        <div class="title">${row[0]}</div>
+        <div class="badge ${getClass(val)}">${getDisplay(val)}</div>
+      </div>
+    `;
+    });
+  }
+
+  // Event
+  document.getElementById("roleFilter").addEventListener("change", (e) => {
+    render(e.target.value);
+  });
+
+  // Initial load
+  render("tenant");
+</script>
+
+<style>
+  .cyass-controls {
+    margin-bottom: 10px;
+  }
+
+  .cyass-controls select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+  }
+
+  /* Role description */
+  .cyass-role-info {
+    background: #f6fafd;
+    border-left: 4px solid #0c0e43;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  /* Status */
+  .yes {
+    color: #277020;
+    font-weight: 600;
+  }
+  .opt {
+    color: #f5a409;
+    font-weight: 600;
+  }
+  .na {
+    color: #999;
+    font-style: italic;
+  }
+
+  /* Highlight column */
+  .active-col {
+    background: rgba(12, 14, 67, 0.08);
+  }
+
+  /* Table */
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .cyass-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .cyass-table th {
+    background: #0c0e43;
+    color: #fff;
+    padding: 10px;
+  }
+
+  .cyass-table td {
+    padding: 8px;
+    border-top: 1px solid #eee;
+    text-align: center;
+  }
+
+  .cyass-table td:first-child {
+    text-align: left;
+  }
+
+  /* Mobile */
+  .cyass-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #fff;
+  }
+
+  .cyass-card .title {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .badge {
+    font-size: 13px;
+  }
+
+  .desktop-only {
+    display: block;
+  }
+  .mobile-only {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .desktop-only {
+      display: none;
+    }
+    .mobile-only {
+      display: block;
+    }
+  }
+</style>

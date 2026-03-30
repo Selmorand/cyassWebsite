@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms &amp; Conditions - CoverAss</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container">
+      <a href="/" class="logo"><img src="images/cyass.png" alt="CYA Pro"></a>
+      <nav class="nav">
+        <ul class="nav__links">
+          <li><a href="/">Home</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="roles.html">Roles</a></li>
+          <li><a href="agents.html">For Agents</a></li>
+          <li><a href="tenants.html">For Tenants</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+        <a href="https://app.cyass.co.za/signup" class="btn btn--lime btn--sm">Start Free</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <div class="nav--mobile" id="mobileNav">
+      <a href="/">Home</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="roles.html">Roles</a>
+      <a href="agents.html">For Agents</a>
+      <a href="tenants.html">For Tenants</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="https://app.cyass.co.za/signup" class="btn btn--lime">Start Free</a>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <h1>Terms &amp; Conditions</h1>
+    <p>Please read these terms carefully before using CoverAss.</p>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>Service Provider</h2>
+      <p>CoverAss is provided by C Y Assets. By using the CoverAss application, you agree to the following terms and conditions.</p>
+
+      <h2>Nature of Service</h2>
+      <p>CoverAss is a property condition inspection tool. Reports are user-generated &mdash; CoverAss provides the platform but is not the inspector. The accuracy and completeness of inspection reports is the responsibility of the user creating the report.</p>
+
+      <h2>Solo Reports</h2>
+      <p>Reports generated without a professional inspector present will carry a "solo report" disclaimer on the PDF. This does not reduce the validity of the report but indicates that it was self-conducted.</p>
+
+      <h2>Report Finalization</h2>
+      <p>Once a report is finalized, it becomes immutable by design. This is intentional &mdash; finalized reports are timestamped and locked to ensure they can serve as reliable evidence. Finalized reports cannot be edited or deleted.</p>
+
+      <h2>Payments</h2>
+      <p>Payments are processed securely via Yoco. Payment is required before accessing the final PDF report (unless covered by a free tier or active subscription). Payments are non-refundable once a report PDF has been generated.</p>
+
+      <h2>Subscriptions</h2>
+      <p>The Agent Pro subscription (R499/month) provides unlimited reports and team management. Subscriptions renew monthly unless cancelled. Team members share the subscription owner's plan.</p>
+
+      <h2>User Accounts</h2>
+      <p>You are responsible for maintaining the security of your account credentials. You must provide accurate information during registration. We reserve the right to suspend accounts that violate these terms.</p>
+
+      <h2>Intellectual Property</h2>
+      <p>The CoverAss application, its design, and its code are the property of C Y Assets. Reports and inspection data you create belong to you.</p>
+
+      <h2>Limitation of Liability</h2>
+      <p>CoverAss is provided "as is". C Y Assets is not liable for any disputes, damages, or losses arising from the use of reports generated through the platform. Users should seek professional advice for legal matters.</p>
+
+      <h2>Changes to Terms</h2>
+      <p>We may update these terms from time to time. Continued use of the service after changes constitutes acceptance of the updated terms.</p>
+
+      <h2>Contact</h2>
+      <p>For questions about these terms, contact us at <strong>admin@cyass.co.za</strong>.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/" class="logo"><img src="images/cyass.png" alt="CYA Pro"></a>
+          <p>Professional property condition reports for the South African market.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Product</h4>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="roles.html">Roles</a>
+          <a href="agents.html">For Agents</a>
+          <a href="tenants.html">For Tenants</a>
+        </div>
+        <div class="footer__links">
+          <h4>Legal</h4>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact</h4>
+          <p>admin@cyass.co.za</p>
+          <p>cyass.co.za</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 C Y Assets. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function() { document.getElementById('header').classList.toggle('header--scrolled', window.scrollY > 10); });
+    document.getElementById('navToggle').addEventListener('click', function() { document.getElementById('mobileNav').classList.toggle('active'); });
+    document.querySelectorAll('#mobileNav a').forEach(function(a) { a.addEventListener('click', function() { document.getElementById('mobileNav').classList.remove('active'); }); });
+  </script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>
