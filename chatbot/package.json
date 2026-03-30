@@ -1,7 +1,7 @@
 {
   "name": "cyass-chatbot",
   "version": "1.0.0",
-  "description": "CoverAss website chatbot API",
+  "description": "CYA Pro website chatbot API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

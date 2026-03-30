@@ -1,5 +1,5 @@
 /**
- * CoverAss Chatbot Widget
+ * CYA Pro Chatbot Widget
  * Embeds on every page. Talks to the chatbot API.
  */
 (function () {
@@ -53,7 +53,7 @@
       if (isOpen) {
         // First open — show greeting
         if (messagesEl.children.length === 0) {
-          addBotMessage("Hi there! Welcome to CoverAss. What's your name?");
+          addBotMessage("Hi there! Welcome to Cover Your Assets. What's your name?");
           inputEl.placeholder = 'Enter your name...';
         }
         inputEl.focus();
@@ -82,7 +82,7 @@
         inputEl.value = '';
         inputEl.placeholder = 'Type your message...';
         chatState = 'ready';
-        addBotMessage("Great to meet you, " + userName + "! How can we assist you today? Ask me anything about CoverAss — inspections, pricing, how it works, or anything else.");
+        addBotMessage("Great to meet you, " + userName + "! How can we assist you today? Ask me anything about CYA Pro — inspections, pricing, how it works, or anything else.");
         return;
       }
 

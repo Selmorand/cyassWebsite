@@ -1,16 +1,16 @@
-COVERASS / CYA PRO -- COMPLETE KNOWLEDGE BASE
+CYA PRO / CYA PRO -- COMPLETE KNOWLEDGE BASE
 ================================================
 
-This document is the comprehensive reference for answering any question about CoverAss (also known as CYA Pro or C-Y-Assets). All information is factual and sourced from official product pages.
+This document is the comprehensive reference for answering any question about CYA Pro (also known as CYA Pro or C-Y-Assets). All information is factual and sourced from official product pages.
 
 
-1. ABOUT COVERASS
+1. ABOUT CYA PRO
 -----------------
 
-CoverAss is a property condition inspection app built for the South African market. It replaces paper checklists used during move-in/move-out inspections, property sales, and maintenance assessments with a professional digital workflow.
+CYA Pro is a property condition inspection app built for the South African market. It replaces paper checklists used during move-in/move-out inspections, property sales, and maintenance assessments with a professional digital workflow.
 
-Business name: C Y Assets (trading as CoverAss / CYass)
-App name: CoverAss (also referred to as CYA Pro or C-Y-ASSETS)
+Business name: C Y Assets (trading as Cover Your Assets / CYass)
+App name: CYA Pro (also referred to as CYA Pro or C-Y-ASSETS)
 Website: cyass.co.za
 App URL: app.cyass.co.za
 Sign up URL: https://app.cyass.co.za/signup
@@ -57,33 +57,33 @@ There are 6 distinct user roles:
 
 TENANT
 Who they are: Renters moving in or out.
-Why they use CoverAss: Protect their deposit by documenting the exact condition of the property on move-in day and move-out day. If there is a dispute, the report serves as timestamped, GPS-verified, photo evidence in a professional PDF.
+Why they use CYA Pro: Protect their deposit by documenting the exact condition of the property on move-in day and move-out day. If there is a dispute, the report serves as timestamped, GPS-verified, photo evidence in a professional PDF.
 Free reports: 1.
 
 LANDLORD
 Who they are: Property owners or managers.
-Why they use CoverAss: Track property condition between tenants, prove damage, and manage maintenance with evidence.
+Why they use CYA Pro: Track property condition between tenants, prove damage, and manage maintenance with evidence.
 Free reports: 1.
 
 BUYER
 Who they are: People purchasing property.
-Why they use CoverAss: Pre-purchase due diligence. Document defects before signing so there are no surprises.
+Why they use CYA Pro: Pre-purchase due diligence. Document defects before signing so there are no surprises.
 Free reports: 1.
 
 SELLER
 Who they are: People selling property.
-Why they use CoverAss: Disclosure reports that prove condition at time of sale, reducing disputes and protecting the seller.
+Why they use CYA Pro: Disclosure reports that prove condition at time of sale, reducing disputes and protecting the seller.
 Free reports: 1.
 
 AGENT
 Who they are: Real estate professionals.
-Why they use CoverAss: Create reports on behalf of any client using any template. This is their primary inspection tool. They can use tenant, landlord, buyer, seller, or contractor inspection templates. Team management included.
+Why they use CYA Pro: Create reports on behalf of any client using any template. This is their primary inspection tool. They can use tenant, landlord, buyer, seller, or contractor inspection templates. Team management included.
 Free reports: 2.
 Agent Pro subscription available at R499/month for unlimited reports.
 
 CONTRACTOR
 Who they are: Builders, plumbers, electricians, and other tradespeople.
-Why they use CoverAss: Document repair and maintenance work with before/after evidence for quoting and sign-off.
+Why they use CYA Pro: Document repair and maintenance work with before/after evidence for quoting and sign-off.
 Free reports: 2.
 Agent Pro subscription available at R499/month for unlimited reports.
 
@@ -239,7 +239,7 @@ Payment flow:
 5. A webhook confirms the payment.
 6. The app updates the report status to "paid" and the PDF becomes accessible.
 
-Payment information is processed securely by Yoco and is NOT stored on CoverAss servers.
+Payment information is processed securely by Yoco and is NOT stored on CYA Pro servers.
 
 Payments are non-refundable once a report PDF has been generated.
 
@@ -263,7 +263,7 @@ PROFESSIONAL PDF REPORTS
 A branded A4 PDF is generated on the client side (no server required). Includes company branding, property details, inspector name and agency, condition overview with statistics, room-by-room detail pages with photos and notes, condition badges, a legal disclaimer, and page numbers. The PDF is uploaded to cloud storage.
 
 SHAREABLE PUBLIC LINKS
-Every finalized report gets a shareable public link. Anyone can view the report without needing a CoverAss account or login.
+Every finalized report gets a shareable public link. Anyone can view the report without needing a CYA Pro account or login.
 
 AUTO-SAVE
 All data auto-saves every 1.5 seconds. There is no manual "save" button needed.
@@ -304,16 +304,16 @@ DATA COLLECTED
 - Account details: full name, email address, role, and optionally agency name.
 - Property details: addresses, property types, and GPS coordinates captured during inspections.
 - Inspection data: condition ratings, notes, photos, and videos uploaded by the user.
-- Payment information is processed by Yoco and is NOT stored on CoverAss servers.
+- Payment information is processed by Yoco and is NOT stored on CYA Pro servers.
 
 DATA USAGE
-Data is used solely to provide the CoverAss service: creating property inspection reports, generating PDFs, and enabling report sharing. CoverAss does not sell data to third parties.
+Data is used solely to provide the CYA Pro service: creating property inspection reports, generating PDFs, and enabling report sharing. CYA Pro does not sell data to third parties.
 
 GPS DATA
 GPS coordinates are captured during property creation to verify inspection location. This data is included in reports and is not used for tracking outside of inspections.
 
 POPIA COMPLIANCE
-CoverAss is compliant with the Protection of Personal Information Act (POPIA), South Africa's data privacy law. Users have the right to access, correct, and request deletion of their personal data.
+CYA Pro is compliant with the Protection of Personal Information Act (POPIA), South Africa's data privacy law. Users have the right to access, correct, and request deletion of their personal data.
 
 DATA DELETION
 Users can request deletion of their account and all associated data by contacting admin@cyass.co.za. Requests are processed within 30 days.
@@ -323,10 +323,10 @@ Users can request deletion of their account and all associated data by contactin
 --------------------------
 
 SERVICE PROVIDER
-CoverAss is provided by C Y Assets.
+CYA Pro is provided by C Y Assets.
 
 NATURE OF SERVICE
-CoverAss is a property condition inspection tool. Reports are user-generated. CoverAss provides the platform but is not the inspector. The accuracy and completeness of inspection reports is the responsibility of the user creating the report.
+CYA Pro is a property condition inspection tool. Reports are user-generated. CYA Pro provides the platform but is not the inspector. The accuracy and completeness of inspection reports is the responsibility of the user creating the report.
 
 SOLO REPORTS
 Reports generated without a professional inspector present carry a "solo report" disclaimer on the PDF. This does not reduce the validity of the report but indicates it was self-conducted.
@@ -341,13 +341,13 @@ SUBSCRIPTIONS
 Agent Pro (R499/month) provides unlimited reports and team management. Subscriptions renew monthly unless cancelled. Team members share the subscription owner's plan.
 
 USER ACCOUNTS
-Users are responsible for maintaining the security of their account credentials. Accurate information must be provided during registration. CoverAss reserves the right to suspend accounts that violate the terms.
+Users are responsible for maintaining the security of their account credentials. Accurate information must be provided during registration. CYA Pro reserves the right to suspend accounts that violate the terms.
 
 INTELLECTUAL PROPERTY
-The CoverAss application, its design, and code are the property of C Y Assets. Reports and inspection data created by users belong to the user.
+The CYA Pro application, its design, and code are the property of C Y Assets. Reports and inspection data created by users belong to the user.
 
 LIMITATION OF LIABILITY
-CoverAss is provided "as is." C Y Assets is not liable for any disputes, damages, or losses arising from the use of reports generated through the platform. Users should seek professional advice for legal matters.
+CYA Pro is provided "as is." C Y Assets is not liable for any disputes, damages, or losses arising from the use of reports generated through the platform. Users should seek professional advice for legal matters.
 
 CHANGES TO TERMS
 Terms may be updated from time to time. Continued use of the service after changes constitutes acceptance of the updated terms.
@@ -394,11 +394,11 @@ O = Optional, the user can include this category if relevant.
 13. FREQUENTLY ASKED QUESTIONS
 -------------------------------
 
-Q: What is CoverAss?
-A: CoverAss is a property condition inspection app built for South Africa. It replaces paper checklists with digital, GPS-verified, timestamped reports that include photo and video evidence, and generates professional PDF reports.
+Q: What is CYA Pro?
+A: CYA Pro is a property condition inspection app built for South Africa. It replaces paper checklists with digital, GPS-verified, timestamped reports that include photo and video evidence, and generates professional PDF reports.
 
-Q: Who makes CoverAss?
-A: CoverAss is provided by C Y Assets.
+Q: Who makes CYA Pro?
+A: CYA Pro is provided by C Y Assets.
 
 Q: Is my first report really free?
 A: Yes. Every new user gets at least 1 free report. Agents and contractors get 2 free reports. No credit card is required to sign up.
@@ -416,13 +416,13 @@ Q: Can I cancel my subscription?
 A: Yes. Agent Pro subscriptions can be cancelled at any time. Your access continues until the end of your current billing period.
 
 Q: Does it work offline?
-A: Yes. CoverAss works fully offline and syncs your data automatically when you are back online. This is designed for areas with poor connectivity.
+A: Yes. CYA Pro works fully offline and syncs your data automatically when you are back online. This is designed for areas with poor connectivity.
 
 Q: Can I share reports with others?
-A: Yes. Every finalized report gets a shareable public link. Anyone can view it without needing a CoverAss account or login.
+A: Yes. Every finalized report gets a shareable public link. Anyone can view it without needing a CYA Pro account or login.
 
 Q: What devices does it work on?
-A: CoverAss works on any modern smartphone, tablet, or computer via the web browser (PWA). There is also a native Android app. An iOS native app is planned, but the PWA works on Safari in the meantime.
+A: CYA Pro works on any modern smartphone, tablet, or computer via the web browser (PWA). There is also a native Android app. An iOS native app is planned, but the PWA works on Safari in the meantime.
 
 Q: Do I need special equipment?
 A: No. Just a modern smartphone or computer with a camera.
@@ -436,8 +436,8 @@ A: No. Finalized reports are immutable by design. They are locked and timestampe
 Q: Where is my data stored?
 A: All data is stored on Google Cloud infrastructure (Firebase) in the europe-west1 region (Europe). Data is encrypted in transit and at rest.
 
-Q: Is CoverAss POPIA compliant?
-A: Yes. CoverAss is compliant with the Protection of Personal Information Act (POPIA). Users can access, correct, and request deletion of their personal data.
+Q: Is CYA Pro POPIA compliant?
+A: Yes. CYA Pro is compliant with the Protection of Personal Information Act (POPIA). Users can access, correct, and request deletion of their personal data.
 
 Q: How do I delete my account and data?
 A: Contact admin@cyass.co.za to request deletion of your account and all associated data. Requests are processed within 30 days.
@@ -475,8 +475,8 @@ A: House, Townhouse, Flat, Cluster, Cottage, Granny Flat, and Other.
 Q: How do I sign up?
 A: Go to https://app.cyass.co.za/signup and create an account with your name, email, password, and role. Google sign-in is also available.
 
-Q: Is CoverAss only for South Africa?
-A: CoverAss is built specifically for the South African market, with SA address formats, SA provinces, Rand pricing, and Yoco payments. However, it can technically be accessed from anywhere.
+Q: Is CYA Pro only for South Africa?
+A: CYA Pro is built specifically for the South African market, with SA address formats, SA provinces, Rand pricing, and Yoco payments. However, it can technically be accessed from anywhere.
 
 Q: How fast is the PDF generated?
 A: The PDF is generated on the client side (in your browser), so it is nearly instant. No server processing is required.

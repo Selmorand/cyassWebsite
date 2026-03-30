@@ -22,7 +22,7 @@ const questionLogFile = path.join(logsDir, 'questions.jsonl');
 // Anthropic client (reads ANTHROPIC_API_KEY from environment)
 const client = new Anthropic();
 
-const SYSTEM_PROMPT = `You are the CoverAss virtual assistant, a friendly and helpful chatbot on the CoverAss website (cyass.co.za). Your job is to answer questions about CoverAss, the property condition inspection app built for South Africa.
+const SYSTEM_PROMPT = `You are the Cover Your Assets virtual assistant, a friendly and helpful chatbot on the Cover Your Assets website (cyass.co.za). Your job is to answer questions about CYA Pro, the property condition inspection app built for South Africa.
 
 KNOWLEDGE BASE:
 ${knowledgeBase}
@@ -37,7 +37,7 @@ RULES:
 - Do not use markdown formatting. Use plain text only.
 - The user's name will be provided. Use it occasionally to keep the conversation personal.
 - If asked about pricing, always mention the free tier first.
-- If asked something completely unrelated to CoverAss or property inspections, politely redirect.`;
+- If asked something completely unrelated to CYA Pro or property inspections, politely redirect.`;
 
 // Chat endpoint
 app.post('/api/chat', async (req, res) => {
@@ -95,5 +95,5 @@ app.get('/api/questions', (req, res) => {
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`CoverAss chatbot API running on port ${PORT}`);
+  console.log(`CYA Pro chatbot API running on port ${PORT}`);
 });
