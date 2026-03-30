@@ -6,7 +6,7 @@
   'use strict';
 
   // === CONFIG ===
-  var API_URL = '/api/chat'; // Change to full URL if API hosted elsewhere, e.g. 'http://localhost:3001/api/chat'
+  var API_URL = 'http://localhost:3001/api/chat'; // For production, change to your server URL e.g. 'https://cyass.co.za/api/chat'
 
   // === STATE ===
   var userName = '';
