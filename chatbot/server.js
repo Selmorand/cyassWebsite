@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
 const Anthropic = require('@anthropic-ai/sdk');
 const nodemailer = require('nodemailer');
 
@@ -229,11 +230,22 @@ app.get('/api/status', (req, res) => {
 });
 
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`CYA Pro chatbot API running on port ${PORT}`);
 
-  // Send a startup notification
-  sendAlert('Chatbot Started',
-    'The CYA Pro chatbot API has started successfully on port ' + PORT + '.\n' +
-    'Time: ' + new Date().toISOString());
-});
+// Use HTTPS if cert.pfx exists, otherwise plain HTTP (local dev)
+const certPath = path.join(__dirname, 'cert.pfx');
+if (fs.existsSync(certPath)) {
+  const options = {
+    pfx: fs.readFileSync(certPath),
+    passphrase: process.env.CERT_PASSPHRASE || 'cyass2025'
+  };
+  https.createServer(options, app).listen(PORT, () => {
+    console.log(`CYA Pro chatbot API running on HTTPS port ${PORT}`);
+    sendAlert('Chatbot Started (HTTPS)',
+      'The CYA Pro chatbot API has started successfully on HTTPS port ' + PORT + '.\n' +
+      'Time: ' + new Date().toISOString());
+  });
+} else {
+  app.listen(PORT, () => {
+    console.log(`CYA Pro chatbot API running on HTTP port ${PORT} (no cert found)`);
+  });
+}

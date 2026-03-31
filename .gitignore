@@ -1,7 +1,10 @@
 node_modules/
 chatbot/logs/
 chatbot/.env
+chatbot/cert.pfx
+*.pfx
 .env
 *.log
 .DS_Store
 Thumbs.db
+ss/
