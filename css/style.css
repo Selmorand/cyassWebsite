@@ -123,14 +123,14 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 90px;
 }
 .logo {
   display: flex;
   align-items: center;
 }
 .logo img {
-  height: 52px;
+  height: 80px;
   width: auto;
 }
 
@@ -163,7 +163,7 @@ ul { list-style: none; }
 /* ===== HERO ===== */
 .hero {
   background: var(--white);
-  padding: 140px 0 0;
+  padding: 160px 0 0;
   color: var(--navy);
   position: relative;
   overflow: hidden;
@@ -560,7 +560,7 @@ ul { list-style: none; }
 /* ===== PAGE HEADER (inner pages) ===== */
 .page-header {
   background: linear-gradient(135deg, var(--navy) 0%, #141758 100%);
-  padding: 140px 0 60px;
+  padding: 160px 0 60px;
   color: var(--white);
   text-align: center;
 }
@@ -626,7 +626,7 @@ ul { list-style: none; }
 /* ===== AGENT / TENANT PAGE HERO ===== */
 .role-hero {
   background: linear-gradient(135deg, var(--navy) 0%, #141758 100%);
-  padding: 160px 0 80px;
+  padding: 170px 0 80px;
   color: var(--white);
 }
 .role-hero .container {
@@ -703,7 +703,7 @@ ul { list-style: none; }
 .nav--mobile {
   display: none;
   position: fixed;
-  top: 72px;
+  top: 90px;
   left: 0;
   right: 0;
   background: var(--white);

@@ -20,7 +20,7 @@
     var toggle = document.createElement('button');
     toggle.className = 'chatbot-toggle';
     toggle.setAttribute('aria-label', 'Chat with us');
-    toggle.innerHTML = '<span class="chat-icon">&#128172;</span><span class="close-icon">&#10005;</span>';
+    toggle.innerHTML = '<img class="chat-icon" src="/images/Icon_reverse.png" alt="Chat"><span class="close-icon">&#10005;</span>';
     document.body.appendChild(toggle);
 
     // Chat window
