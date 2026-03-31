@@ -7,7 +7,7 @@
 
   // === CONFIG (auto-detects environment) ===
   var isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-  var API_URL = isLocal ? 'http://localhost:3001/api/chat' : 'https://' + window.location.hostname + ':3001/api/chat';
+  var API_URL = isLocal ? 'http://localhost:3001/api/chat' : 'http://' + window.location.hostname + ':3001/api/chat';
 
   // === STATE ===
   var userName = '';
