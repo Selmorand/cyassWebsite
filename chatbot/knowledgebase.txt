@@ -293,6 +293,9 @@ The PWA works on Safari. A native iOS app has not yet been built.
 
 The app works on phones, tablets, and desktops. No special equipment is required -- just a modern smartphone or computer.
 
+IMPORTANT -- MEMORY / PERFORMANCE ISSUES:
+If a user reports memory full messages, crashes, slow performance, or storage issues when using the browser version (PWA), you MUST recommend they download the native Android app instead. The Android app handles memory and camera access much better than the browser on most devices. Direct them to search "CYA Pro" on the Google Play Store or contact admin@cyass.co.za for a direct download link. The Android app is specifically built to avoid the memory limitations of browsers on mobile devices.
+
 
 10. PRIVACY AND DATA
 ---------------------
