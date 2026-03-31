@@ -21,7 +21,7 @@
     var toggle = document.createElement('button');
     toggle.className = 'chatbot-toggle';
     toggle.setAttribute('aria-label', 'Chat with us');
-    toggle.innerHTML = '<img class="chat-icon" src="/images/Icon_reverse.png" alt="Chat"><span class="close-icon">&#10005;</span>';
+    toggle.innerHTML = '<span class="chat-icon">&#128172;</span><span class="close-icon">&#10005;</span>';
     document.body.appendChild(toggle);
 
     // Chat window
@@ -29,7 +29,7 @@
     win.className = 'chatbot-window';
     win.innerHTML =
       '<div class="chatbot-header">' +
-        '<img src="/images/cyass.png" alt="CYA Pro">' +
+        '<img src="/images/Icon_reverse.png" alt="CYA Pro">' +
         '<div class="chatbot-header-text">' +
           '<h4>CYA Pro Assistant</h4>' +
           '<p>We typically reply instantly</p>' +
