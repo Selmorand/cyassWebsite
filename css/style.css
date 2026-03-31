@@ -71,13 +71,12 @@ ul { list-style: none; }
   direction: ltr;
   -webkit-font-smoothing: antialiased;
 }
-/* Navy on white/light backgrounds */
+/* All icons lime green */
 .role-card__icon .mi,
 .step__icon .mi,
 .trust-item__icon .mi,
 .contact-card__icon .mi,
-.qr-card .mi { color: var(--navy); font-size: 2rem; }
-/* Lime on dark backgrounds */
+.qr-card .mi { color: var(--lime); font-size: 2rem; }
 .feature__icon .mi { color: var(--lime); font-size: 1.5rem; }
 .role-feature__icon .mi { color: var(--lime); font-size: 1.3rem; }
 
