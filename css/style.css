@@ -56,6 +56,31 @@ ul { list-style: none; }
 .section--dark .section-subtitle { color: rgba(255,255,255,0.7); }
 .section--dark .section-title { color: var(--white); }
 
+/* ===== MATERIAL ICONS ===== */
+.mi {
+  font-family: 'Material Icons Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: inherit;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+/* Navy on white/light backgrounds */
+.role-card__icon .mi,
+.step__icon .mi,
+.trust-item__icon .mi,
+.contact-card__icon .mi,
+.qr-card .mi { color: var(--navy); font-size: 2rem; }
+/* Lime on dark backgrounds */
+.feature__icon .mi { color: var(--lime); font-size: 1.5rem; }
+.role-feature__icon .mi { color: var(--lime); font-size: 1.3rem; }
+
 /* ===== BUTTONS ===== */
 .btn {
   display: inline-block;
