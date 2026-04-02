@@ -243,6 +243,13 @@ Payment information is processed securely by Yoco and is NOT stored on CYA Pro s
 
 Payments are non-refundable once a report PDF has been generated.
 
+REPORT STORAGE AND RETENTION
+Paid reports are stored securely in the cloud for 5 years from the date they were finalized. Each report includes a shareable public link and a QR code on the PDF, so anyone can access the report online at any time without needing a login. After 5 years, reports are automatically deleted. Unpaid reports (drafts that were never finalized and paid for) are automatically removed after 30 days.
+
+Once a PDF is generated, the report is permanently locked and cannot be edited. This is by design -- an immutable, timestamped report is what gives it legal credibility as court-ready evidence.
+
+Users can download their PDF again at any time during the 5-year storage period.
+
 
 8. FEATURES
 ------------
