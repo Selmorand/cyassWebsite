@@ -566,7 +566,7 @@ ul { list-style: none; }
 }
 .workflow-step {
   text-align: center;
-  background: var(--white);
+  background: #d6d6d6;
   border-radius: var(--radius);
   padding: 20px;
   box-shadow: var(--shadow);
