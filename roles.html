@@ -218,7 +218,7 @@
         <div class="role-card" data-select-role="contractor">
           <div class="role-card__icon"><span class="mi">construction</span></div>
           <h3>Contractors</h3>
-          <p>Get invited to jobs, document work with before/during/after photos, upload compliance certificates, and build a professional profile.</p>
+          <p>Run inspections and get invited to jobs. Document work with before/during/after photos, upload compliance certificates, and build a professional profile.</p>
         </div>
       </div>
     </div>
@@ -227,12 +227,20 @@
   <!-- Comparison Table -->
   <section class="section section--light">
     <div class="container">
-      <h2 class="section-title">Inspection Comparison</h2>
-      <p class="section-subtitle">See which categories apply to each role.</p>
+      <h2 class="section-title">Role Comparison</h2>
+      <p class="section-subtitle">See inspection categories and features by role.</p>
 
-      <div class="cyass-controls">
-        <label>Select Role:</label>
-        <select id="roleFilter">
+      <div class="cyass-controls" style="flex-wrap:wrap;gap:16px;">
+        <div>
+          <label>View:</label>
+          <select id="viewToggle">
+            <option value="inspection">Inspection Categories</option>
+            <option value="features">Role Features</option>
+          </select>
+        </div>
+        <div>
+          <label>Select Role:</label>
+          <select id="roleFilter">
           <option value="tenant">Tenant</option>
           <option value="landlord">Landlord</option>
           <option value="buyer">Buyer</option>
@@ -240,6 +248,7 @@
           <option value="agent">Agent</option>
           <option value="contractor">Contractor</option>
         </select>
+        </div>
       </div>
 
       <div id="roleInfo" class="cyass-role-info"></div>
@@ -326,10 +335,11 @@
       buyer: 'Buyers inspect a property before transfer to identify defects, risks, and compliance issues.',
       seller: 'Sellers document property condition to support transparency and avoid legal disputes.',
       agent: 'Agents conduct inspections to support transactions and provide professional reports.',
-      contractor: 'Contractors get invited to maintenance and repair jobs via shareable links. They sign up in 3 steps, document work with before/during/after photos, upload compliance certificates for regulated trades, and build professional profiles with registrations and accreditations.'
+      contractor: 'Contractors document repair and maintenance work with before/during/after photos. They get invited to jobs via shareable links (no prior registration needed), upload compliance certificates for regulated trades, and build professional profiles with trade registrations and accreditations. They also get 2 free inspection reports.'
     };
 
-    var data = [
+    // Part 1: Inspection Categories
+    var inspectionData = [
       ['Standard Rooms','Y','Y','Y','Y','Y','Y'],
       ['Bathroom Systems','Y','Y','Y','Y','Y','Y'],
       ['Kitchen Systems','Y','Y','Y','Y','Y','Y'],
@@ -344,7 +354,7 @@
       ['Safety Systems','O','Y','Y','Y','Y','Y'],
       ['Marketing Photos','-','-','O','Y','Y','-'],
       ['Repair Recommendations','-','Y','Y','O','Y','Y'],
-      ['Before/During/After Photos','-','O','O','O','O','Y'],
+      ['Before/After Repairs','-','O','O','O','O','Y'],
       ['Electrical COC','-','O','Y','Y','Y','Y'],
       ['Gas COC','-','O','Y','Y','Y','Y'],
       ['Plumbing COC','-','O','Y','Y','Y','Y'],
@@ -353,14 +363,41 @@
       ['Electric Fence Certificate','-','O','Y','Y','Y','Y'],
       ['Building Plans','-','O','Y','Y','Y','O'],
       ['Occupation Certificate','-','O','Y','Y','Y','O'],
-      ['Warranty Documents','-','O','O','O','O','Y'],
-      ['Certificate Uploads (COC)','-','-','-','-','-','Y'],
-      ['Professional Profile','-','-','-','-','-','Y'],
-      ['Job Status Tracking','-','Y','-','-','Y','Y']
+      ['Warranty Documents','-','O','O','O','O','Y']
     ];
 
-    function getDisplay(val) { return val === 'Y' ? 'Yes' : val === 'O' ? 'Optional' : 'N/A'; }
-    function getClass(val) { return val === 'Y' ? 'yes' : val === 'O' ? 'opt' : 'na'; }
+    // Part 4: Role Feature Comparison
+    var featureData = [
+      ['Inspection Templates','Y','Y','Y','Y','ALL','Y'],
+      ['Free Reports','1','1','1','1','2','2'],
+      ['Team Management','-','-','-','-','Y','Y'],
+      ['Agent Pro Subscription','-','-','-','-','Y','-'],
+      ['Create Jobs','Y','Y','Y','Y','Y','Y'],
+      ['Accept Job Invites','-','-','-','-','-','Y'],
+      ['Contractor Profile','-','-','-','-','-','Y'],
+      ['Before/During/After Photos','-','-','-','-','-','Y'],
+      ['Certificate Uploads','-','-','-','-','-','Y'],
+      ['Job Status Management','Y','Y','Y','Y','Y','Y'],
+      ['Share Job via WhatsApp','Y','Y','Y','Y','Y','-'],
+      ['Keys & Access Template','Y','Y','O','O','O','-'],
+      ['Marketing Photos Template','-','-','O','Y','Y','-']
+    ];
+
+    var data = inspectionData;
+
+    function getDisplay(val) {
+      if (val === 'Y') return 'Yes';
+      if (val === 'O') return 'Optional';
+      if (val === 'ALL') return 'All';
+      if (val === '1' || val === '2') return val;
+      return 'N/A';
+    }
+    function getClass(val) {
+      if (val === 'Y' || val === 'ALL') return 'yes';
+      if (val === 'O') return 'opt';
+      if (val === '1' || val === '2') return 'yes';
+      return 'na';
+    }
 
     function render(role) {
       // Description
@@ -397,6 +434,12 @@
       var activeCard = document.querySelector('[data-select-role="' + role + '"]');
       if (activeCard) activeCard.classList.add('active');
     }
+
+    // View toggle change
+    document.getElementById('viewToggle').addEventListener('change', function(e) {
+      data = e.target.value === 'features' ? featureData : inspectionData;
+      render(document.getElementById('roleFilter').value);
+    });
 
     // Dropdown change
     document.getElementById('roleFilter').addEventListener('change', function(e) { render(e.target.value); });

@@ -1,0 +1,441 @@
+================================================================================
+                    COVERASS - ROLE INSPECTION TEMPLATE COMPARISON
+================================================================================
+Generated: 2026-03-28
+Updated:   2026-04-02
+
+LEGEND:
+  Y = Yes (Required/Mandatory category)
+  O = Optional category
+  - = Not included for this role
+
+================================================================================
+PART 1: INSPECTION CATEGORIES BY ROLE
+================================================================================
+
++----------------------------------+--------+----------+-------+--------+-------+------------+
+| Category                         | Tenant | Landlord | Buyer | Seller | Agent | Contractor |
++----------------------------------+--------+----------+-------+--------+-------+------------+
+| Standard Rooms                   |   Y    |    Y     |   Y   |   Y    |   Y   |     Y      |
+| Bathroom Systems                 |   Y    |    Y     |   Y   |   Y    |   Y   |     Y      |
+| Kitchen Systems                  |   Y    |    Y     |   Y   |   Y    |   Y   |     Y      |
+| Exterior                         |   Y    |    Y     |   Y   |   Y    |   Y   |     Y      |
+| Special Features                 |   O    |    Y     |   Y   |   Y    |   Y   |     Y      |
+| Meter Evidence                   |   Y    |    Y     |   Y   |   Y    |   Y   |     O      |
+| Keys & Access                    |   Y    |    Y     |   O   |   O    |   O   |     -      |
+| Compliance Documents             |   -    |    O     |   Y   |   Y    |   Y   |     Y      |
+| Structural Indicators            |   -    |    O     |   Y   |   Y    |   Y   |     Y      |
+| Damp / Moisture                  |   Y    |    Y     |   Y   |   Y    |   Y   |     Y      |
+| Appliance Serial Numbers         |   O    |    Y     |   Y   |   Y    |   Y   |     O      |
+| Safety Systems                   |   O    |    Y     |   Y   |   Y    |   Y   |     Y      |
+| Marketing Photos                 |   -    |    -     |   O   |   Y    |   Y   |     -      |
+| Repair Recommendations           |   -    |    Y     |   Y   |   O    |   Y   |     Y      |
+| Before/After Repairs             |   -    |    O     |   O   |   O    |   O   |     Y      |
+| Electrical COC                   |   -    |    O     |   Y   |   Y    |   Y   |     Y      |
+| Gas COC                          |   -    |    O     |   Y   |   Y    |   Y   |     Y      |
+| Plumbing COC                     |   -    |    O     |   Y   |   Y    |   Y   |     Y      |
+| Beetle Certificate               |   -    |    -     |   Y   |   Y    |   Y   |     O      |
+| Water Installation Certificate   |   -    |    O     |   Y   |   Y    |   Y   |     O      |
+| Electric Fence Certificate       |   -    |    O     |   Y   |   Y    |   Y   |     Y      |
+| Building Plans                   |   -    |    O     |   Y   |   Y    |   Y   |     O      |
+| Occupation Certificate           |   -    |    O     |   Y   |   Y    |   Y   |     O      |
+| Warranty Documents               |   -    |    O     |   O   |   O    |   O   |     Y      |
++----------------------------------+--------+----------+-------+--------+-------+------------+
+
+TOTALS:
+  Tenant:      10 categories ( 7 required,  3 optional)
+  Landlord:    21 categories ( 8 required, 13 optional)
+  Buyer:       22 categories (17 required,  5 optional)
+  Seller:      22 categories (17 required,  5 optional)
+  Agent:       22 categories (17 required,  5 optional)
+  Contractor:  21 categories (14 required,  7 optional)
+
+NOTE: Agents can also select ANY other role's template to use.
+
+================================================================================
+PART 2: DETAILED INPUTS PER CATEGORY
+================================================================================
+
+1. STANDARD ROOMS (19 inputs)
+   - Walls - Condition          [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Walls - Photos             [photo-multi] REQUIRED
+   - Walls - Notes              [textarea]
+   - Floors/Carpets - Condition [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Floors - Photos            [photo-multi] REQUIRED
+   - Floors - Notes             [textarea]
+   - Ceiling - Condition        [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Ceiling - Photos           [photo-multi] REQUIRED
+   - Ceiling - Notes            [textarea]
+   - Windows - Condition        [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Windows - Photos           [photo-multi] REQUIRED
+   - Windows - Notes            [textarea]
+   - Doors - Condition          [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Doors - Photos             [photo-multi] REQUIRED
+   - Doors - Notes              [textarea]
+   - Cupboards - Condition      [dropdown: Good/Fair/Poor/Urgent Repair/N/A]
+   - Cupboards - Photos         [photo-multi]
+   - Power Sockets - Condition  [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Sockets - Photos           [photo-multi]
+   - Light Fittings - Condition [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Lighting - Photos          [photo-multi]
+
+2. BATHROOM SYSTEMS (13 inputs)
+   - Basin - Condition          [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Basin - Photos             [photo-multi] REQUIRED
+   - Toilet - Condition         [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Toilet - Photos            [photo-multi] REQUIRED
+   - Shower/Bath - Condition    [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Shower/Bath - Photos       [photo-multi] REQUIRED
+   - Taps/Plumbing - Condition  [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Taps - Photos              [photo-multi]
+   - Leaks Present?             [dropdown: No/Minor/Moderate/Severe] REQUIRED
+   - Leak Evidence - Photos     [photo-multi]
+   - Damp/Moisture Present?     [dropdown: No/Minor/Moderate/Severe] REQUIRED
+   - Damp Evidence - Photos     [photo-multi]
+   - Ventilation - Condition    [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Additional Notes           [textarea]
+
+3. KITCHEN SYSTEMS (12 inputs)
+   - Cabinets - Condition       [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Cabinets - Photos          [photo-multi] REQUIRED
+   - Countertops - Condition    [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Countertops - Photos       [photo-multi] REQUIRED
+   - Sink - Condition           [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Sink - Photos              [photo-multi] REQUIRED
+   - Built-in Appliances?       [checkbox]
+   - Appliances - Condition     [dropdown: Good/Fair/Poor/Urgent Repair/N/A]
+   - Appliances - Photos        [photo-multi]
+   - Plumbing - Condition       [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Leaks Present?             [dropdown: No/Minor/Moderate/Severe] REQUIRED
+   - Extractor Fan - Condition  [dropdown: Good/Fair/Poor/Urgent Repair/N/A]
+   - Additional Notes           [textarea]
+
+4. EXTERIOR (11 inputs)
+   - Roof - Condition           [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Roof - Photos              [photo-multi] REQUIRED
+   - Gutters - Condition        [dropdown: Good/Fair/Poor/Urgent Repair/N/A] REQUIRED
+   - Gutters - Photos           [photo-multi]
+   - Paving/Driveway - Cond.   [dropdown: Good/Fair/Poor/Urgent Repair/N/A]
+   - Paving - Photos            [photo-multi]
+   - Garden/Lawn - Condition    [dropdown: Good/Fair/Poor/Urgent Repair/N/A]
+   - Garden - Photos            [photo-multi]
+   - Fencing - Condition        [dropdown: Good/Fair/Poor/Urgent Repair/N/A]
+   - Fencing - Photos           [photo-multi]
+   - Security Features Present? [textarea]
+   - Security Features - Photos [photo-multi]
+   - Additional Notes           [textarea]
+
+5. SPECIAL FEATURES (13 inputs)
+   - Solar Power System?        [checkbox]
+   - Solar System - Condition   [dropdown: Good/Fair/Poor/Urgent Repair/N/A]
+   - Solar System - Photos      [photo-multi]
+   - Inverter/UPS Present?      [checkbox]
+   - Inverter - Condition       [dropdown: Good/Fair/Poor/Urgent Repair/N/A]
+   - Generator Present?         [checkbox]
+   - Generator - Condition      [dropdown: Good/Fair/Poor/Urgent Repair/N/A]
+   - Air Conditioning Present?  [checkbox]
+   - Air Conditioning - Cond.   [dropdown: Good/Fair/Poor/Urgent Repair/N/A]
+   - Water Tanks/JoJo Present?  [checkbox]
+   - Water Tanks - Condition    [dropdown: Good/Fair/Poor/Urgent Repair/N/A]
+   - Smart Home Devices?        [textarea]
+   - Special Features - Photos  [photo-multi]
+   - Additional Notes           [textarea]
+
+6. METER EVIDENCE (8 inputs)
+   - Electricity Meter Reading  [number] REQUIRED
+   - Electricity Meter - Photo  [photo-multi] REQUIRED
+   - Water Meter Reading        [number]
+   - Water Meter - Photo        [photo-multi]
+   - Gas Meter Present?         [checkbox]
+   - Gas Meter Reading          [number]
+   - Gas Meter - Photo          [photo-multi]
+   - Meter Notes                [textarea]
+
+7. KEYS & ACCESS (9 inputs)
+   - Number of Keys             [number] REQUIRED
+   - Key Types                  [textarea]
+   - Number of Remotes          [number]
+   - Remote Types               [textarea]
+   - Access Tags/Cards          [text]
+   - Gate Codes (Masked)        [text]
+   - Alarm Code (Masked)        [text]
+   - Keys & Remotes - Photos    [photo-multi] REQUIRED
+   - Additional Notes           [textarea]
+
+8. COMPLIANCE DOCUMENTS (3 inputs)
+   - Compliance Docs Present    [textarea]
+   - Documents - Photos         [photo-multi]
+   - Compliance Notes           [textarea]
+
+9. STRUCTURAL INDICATORS (8 inputs)
+   - Foundation Cracks?         [dropdown: No/Minor/Moderate/Severe] REQUIRED
+   - Foundation - Photos        [photo-multi]
+   - Roof Sagging/Movement?     [dropdown: No/Minor/Moderate/Severe] REQUIRED
+   - Roof Structure - Photos    [photo-multi]
+   - Structural Wall Cracks?    [dropdown: No/Hairline/Minor/Moderate/Severe] REQUIRED
+   - Wall Cracks - Photos       [photo-multi]
+   - Settlement/Movement Signs? [dropdown: No/Minor/Moderate/Severe]
+   - Structural Notes           [textarea]
+
+10. DAMP / MOISTURE (6 inputs)
+    - Damp/Moisture Locations   [textarea]
+    - Overall Damp Severity     [dropdown: None/Minor/Moderate/Severe] REQUIRED
+    - Mould Present?            [dropdown: No/Minor/Moderate/Severe] REQUIRED
+    - Mould Locations           [textarea]
+    - Damp/Moisture - Photos    [photo-multi]
+    - Damp/Moisture Notes       [textarea]
+
+11. APPLIANCE SERIAL NUMBERS (9 inputs)
+    - Appliances Present        [textarea]
+    - Stove Serial Number       [text]
+    - Oven Serial Number        [text]
+    - Dishwasher Serial Number  [text]
+    - Washing Machine Serial    [text]
+    - Dryer Serial Number       [text]
+    - Fridge Serial Number      [text]
+    - Other Appliances          [textarea]
+    - Serial Number Plates      [photo-multi]
+
+12. SAFETY SYSTEMS (11 inputs)
+    - Security Gates Present?   [checkbox]
+    - Security Gates - Cond.    [dropdown: Good/Fair/Poor/Urgent Repair/N/A]
+    - Burglar Bars Present?     [checkbox]
+    - Burglar Bars - Condition  [dropdown: Good/Fair/Poor/Urgent Repair/N/A]
+    - Fire Extinguishers?       [checkbox]
+    - Number of Extinguishers   [number]
+    - Smoke Detectors Present?  [checkbox]
+    - Pool Safety Fencing?      [checkbox]
+    - Pool Fencing Compliant?   [dropdown: N/A/Yes/No/Unknown]
+    - Safety Systems - Photos   [photo-multi]
+    - Safety Notes              [textarea]
+
+13. MARKETING PHOTOS (4 inputs)
+    - Marketing Photo Purpose   [dropdown: Property Listing/Staging/Feature Highlights/Virtual Tour/Social Media]
+    - Marketing Photos          [photo-multi] REQUIRED
+    - Photo Locations/Desc.     [textarea]
+    - Marketing Notes           [textarea]
+
+14. REPAIR RECOMMENDATIONS (5 inputs)
+    - Repairs Required          [textarea]
+    - Repair Priority           [dropdown: Low/Medium/High/Urgent]
+    - Estimated Cost (ZAR)      [number]
+    - Repair Area - Photos      [photo-multi]
+    - Repair Notes              [textarea]
+
+15. BEFORE/AFTER REPAIRS (7 inputs)
+    - Type of Repair            [text] REQUIRED
+    - Repair Location           [text] REQUIRED
+    - BEFORE Repair - Photos    [photo-multi] REQUIRED
+    - AFTER Repair - Photos     [photo-multi] REQUIRED
+    - Repair Date               [text]
+    - Actual Repair Cost (ZAR)  [number]
+    - Repair Notes              [textarea]
+
+16. ELECTRICAL COC (7 inputs)
+    - Electrical COC Present?   [dropdown: Yes/No/Expired/Unknown] REQUIRED
+    - COC Certificate Number    [text]
+    - COC Issue Date            [text]
+    - COC Issuer Name           [text]
+    - Issuer Contact            [text]
+    - Electrical COC - Photos   [photo-multi]
+    - COC Notes                 [textarea]
+
+17. GAS COC (7 inputs)
+    - Gas COC Present?          [dropdown: Yes/No/N/A - No Gas/Expired/Unknown] REQUIRED
+    - Gas COC Number            [text]
+    - COC Issue Date            [text]
+    - COC Issuer Name           [text]
+    - Issuer Contact            [text]
+    - Gas COC - Photos          [photo-multi]
+    - Gas COC Notes             [textarea]
+
+18. PLUMBING COC (7 inputs)
+    - Plumbing COC Present?     [dropdown: Yes/No/N/A - Not Cape Town/Expired/Unknown] REQUIRED
+    - Plumbing COC Number       [text]
+    - COC Issue Date            [text]
+    - COC Issuer Name           [text]
+    - Issuer Contact            [text]
+    - Plumbing COC - Photos     [photo-multi]
+    - Plumbing COC Notes        [textarea]
+
+19. BEETLE CERTIFICATE (7 inputs)
+    - Beetle Cert Present?      [dropdown: Yes/No/Not Required/Expired/Unknown] REQUIRED
+    - Certificate Number        [text]
+    - Issue Date                [text]
+    - Issuer Company            [text]
+    - Treatment Performed?      [dropdown: N/A/Yes/No/Preventative Only]
+    - Beetle Certificate Photos [photo-multi]
+    - Beetle Certificate Notes  [textarea]
+
+20. WATER INSTALLATION CERTIFICATE (6 inputs)
+    - Water Cert Present?       [dropdown: Yes/No/Not Required/Expired] REQUIRED
+    - Certificate Number        [text]
+    - Issue Date                [text]
+    - Issuer Name               [text]
+    - Water Certificate Photos  [photo-multi]
+    - Water Certificate Notes   [textarea]
+
+21. ELECTRIC FENCE CERTIFICATE (6 inputs)
+    - Electric Fence Cert?      [dropdown: Yes/No/N/A - No Electric Fence/Expired] REQUIRED
+    - Certificate Number        [text]
+    - Issue Date                [text]
+    - Issuer Name               [text]
+    - Electric Fence Photos     [photo-multi]
+    - Electric Fence Notes      [textarea]
+
+22. BUILDING PLANS (6 inputs)
+    - Approved Plans Present?   [dropdown: Yes/No/Partial/Unknown] REQUIRED
+    - Municipality Approved?    [dropdown: Yes/No/Unknown]
+    - Plan Approval Date        [text]
+    - Municipality Ref Number   [text]
+    - Building Plans - Photos   [photo-multi]
+    - Building Plans Notes      [textarea]
+
+23. OCCUPATION CERTIFICATE (5 inputs)
+    - Occupation Cert Present?  [dropdown: Yes/No/Not Required/Unknown] REQUIRED
+    - Certificate Number        [text]
+    - Issue Date                [text]
+    - Occupation Cert Photos    [photo-multi]
+    - Occupation Cert Notes     [textarea]
+
+24. WARRANTY DOCUMENTS (5 inputs)
+    - Warranties Present?       [dropdown: Yes/Some/No/Unknown]
+    - List of Warranties        [textarea]
+    - Warranty Expiry Dates     [textarea]
+    - Warranty Documents Photos [photo-multi]
+    - Warranty Notes            [textarea]
+
+================================================================================
+PART 3: CONTRACTOR JOBS SYSTEM (NEW)
+================================================================================
+
+In addition to the inspection template above, contractors have a dedicated
+job management system for maintenance/repair work.
+
+CONTRACTOR PROFILE
+------------------
+Contractors complete a 4-step profile after accepting their first job invite:
+
+Step 1 - Business & Trade:
+  - Business Name              [text] REQUIRED
+  - Mobile Number              [text] REQUIRED
+  - Primary Trade              [dropdown: 14 trade types] REQUIRED
+  - Secondary Trades           [multi-select toggle buttons]
+  - Province                   [dropdown: 9 SA provinces] REQUIRED
+  - Town/City                  [text] REQUIRED
+  - Service Radius (km)        [number: 1-500]
+
+Step 2 - Registrations & Accreditations:
+  - Multiple registrations, each with:
+    - Registration Body        [dropdown: ECA/ECB/SAQCC Gas/PIRB/ECSA/SACAP/NHBRC/FPASA/Other]
+    - Registration Number      [text]
+    - Expiry Date              [date] (optional)
+
+Step 3 - Capabilities:
+  Certificates they can issue:
+    - Electrical CoC            [checkbox]
+    - Gas CoC                   [checkbox]
+    - Plumbing/Water CoC        [checkbox]
+    - Electric Fence CoC        [checkbox]
+    - Beetle/Pest Certificate   [checkbox]
+  Documents they can provide:
+    - Repair Quotations         [checkbox]
+    - Warranties & Guarantees   [checkbox]
+    - Completion Certificates   [checkbox]
+
+Step 4 - Operational:
+  - Emergency Callout           [checkbox]
+  - Base Callout Fee (R)        [number] (optional)
+  - Additional Notes            [textarea]
+
+JOB MANAGEMENT
+--------------
+14 Trade Types:
+  electrician, gas_installer, plumber, builder, painter, tiler, roofer,
+  carpenter, locksmith, pest_control, waterproofer, glazier,
+  general_maintenance, other
+
+Each trade has 5-10 specific job types. Example (electrician):
+  fix_lights, install_geyser, fault_finding, rewire, db_board,
+  issue_electrical_coc, other
+
+Job Creation Inputs:
+  - Property                   [select from existing properties] REQUIRED
+  - Trade Type                 [dropdown: 14 types] REQUIRED
+  - Job Type                   [dropdown: filtered by trade] REQUIRED
+  - Custom Title               [text] (only if jobType = 'other')
+  - Area of Property           [dropdown: 13 areas] REQUIRED
+  - Urgency                    [buttons: low/medium/high/critical] REQUIRED
+  - Description/Notes          [textarea] REQUIRED
+
+13 Areas of Property:
+  kitchen, bathroom, bedroom, living_room, garage, garden, roof,
+  exterior, pool, fence, driveway, storeroom, other
+
+Job Status Flow:
+  not_started → in_progress → completed
+       │              │
+       │              ├── awaiting_parts → in_progress
+       │              │
+       │              └── awaiting_approval → completed
+       │
+       └── cancelled
+
+Job Execution Inputs:
+  - Before Photos              [photo-multi] REQUIRED for completion
+  - During Photos              [photo-multi] (optional)
+  - After Photos               [photo-multi] REQUIRED for completion
+  - Certificates               [document upload] REQUIRED for 5 job types
+  - Description/Notes          [textarea] (auto-saves)
+
+5 Certificate-Required Job Types:
+  - issue_electrical_coc       (Electrical Certificate of Compliance)
+  - issue_gas_coc              (Gas Certificate of Compliance)
+  - issue_plumbing_coc         (Plumbing/Water Certificate of Compliance)
+  - issue_electric_fence_coc   (Electric Fence Certificate of Compliance)
+  - issue_beetle_cert          (Beetle/Pest Certificate)
+
+JOB INVITE FLOW (PUBLIC)
+-------------------------
+1. Owner/agent creates job → gets invite link
+2. Shares via WhatsApp, email, or copy link
+3. Contractor clicks link → public 3-step flow:
+   Step 1: Confirm identity (email or phone)
+   Step 2: Set password + name → auto-signup as contractor
+   Step 3: Job assigned → redirect to profile (if incomplete) or job detail
+
+Invite link format: https://app.cyass.co.za/job-invite/{jobId}
+
+Share message includes: job title, property, trade type, reference ID
+
+================================================================================
+PART 4: ROLE COMPARISON SUMMARY
+================================================================================
+
++----------------------------+--------+----------+-------+--------+-------+------------+
+| Feature                    | Tenant | Landlord | Buyer | Seller | Agent | Contractor |
++----------------------------+--------+----------+-------+--------+-------+------------+
+| Inspection Templates       |   Y    |    Y     |   Y   |   Y    |  ALL  |     Y      |
+| Free Reports               |   1    |    1     |   1   |   1    |   2   |     2      |
+| Team Management            |   -    |    -     |   -   |   -    |   Y   |     Y      |
+| Agent Pro Subscription     |   -    |    -     |   -   |   -    |   Y   |     -      |
+| Create Jobs                |   Y    |    Y     |   Y   |   Y    |   Y   |     Y      |
+| Accept Job Invites         |   -    |    -     |   -   |   -    |   -   |     Y      |
+| Contractor Profile         |   -    |    -     |   -   |   -    |   -   |     Y      |
+| Before/During/After Photos |   -    |    -     |   -   |   -    |   -   |     Y      |
+| Certificate Uploads        |   -    |    -     |   -   |   -    |   -   |     Y      |
+| Job Status Management      |   Y    |    Y     |   Y   |   Y    |   Y   |     Y      |
+| Share Job via WhatsApp     |   Y    |    Y     |   Y   |   Y    |   Y   |     -      |
+| Keys & Access Template     |   Y    |    Y     |   O   |   O    |   O   |     -      |
+| Marketing Photos Template  |   -    |    -     |   O   |   Y    |   Y   |     -      |
++----------------------------+--------+----------+-------+--------+-------+------------+
+
+KEY:
+  Y   = Yes / Available
+  O   = Optional
+  ALL = Can use any role's template
+  -   = Not available for this role
+
+================================================================================
+END OF REPORT
+================================================================================
