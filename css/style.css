@@ -558,56 +558,63 @@ ul { list-style: none; }
 }
 
 /* ===== WORKFLOW STEPS WITH SCREENSHOTS ===== */
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
 .workflow-step {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  margin-bottom: 48px;
+  text-align: center;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
 }
-.workflow-step:nth-child(even) {
-  flex-direction: row-reverse;
-}
-.workflow-step__content {
-  flex: 1;
+.workflow-step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
 }
 .workflow-step__content h3 {
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   color: var(--navy);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 8px;
 }
 .workflow-step__content h3 .step-num {
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: var(--lime);
   color: var(--navy);
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   font-weight: 800;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 .workflow-step__content p {
   color: var(--text-light);
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-size: 0.82rem;
+  line-height: 1.6;
 }
 .workflow-step__content ul {
   list-style: none;
-  margin-top: 12px;
+  margin-top: 8px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 .workflow-step__content ul li {
-  padding-left: 20px;
+  padding-left: 16px;
   position: relative;
   color: var(--text-light);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  text-align: left;
 }
 .workflow-step__content ul li::before {
   content: '\2713';
@@ -617,22 +624,26 @@ ul { list-style: none; }
   font-weight: 700;
 }
 .workflow-step__image {
-  flex: 0 0 260px;
+  margin-bottom: 12px;
 }
 .workflow-step__image img {
   width: 100%;
-  border-radius: 16px;
+  max-width: 180px;
+  margin: 0 auto;
+  border-radius: 12px;
   box-shadow: var(--shadow);
 }
+@media (min-width: 1200px) {
+  .workflow-grid { grid-template-columns: repeat(5, 1fr); }
+}
+@media (max-width: 1024px) {
+  .workflow-grid { grid-template-columns: repeat(3, 1fr); }
+}
 @media (max-width: 768px) {
-  .workflow-step,
-  .workflow-step:nth-child(even) {
-    flex-direction: column;
-    text-align: center;
-  }
-  .workflow-step__image { flex: none; max-width: 240px; }
-  .workflow-step__content ul { align-items: center; }
-  .workflow-step__content h3 { justify-content: center; }
+  .workflow-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .workflow-grid { grid-template-columns: 1fr; max-width: 300px; margin: 0 auto; }
 }
 
 /* ===== CTA BANNER ===== */

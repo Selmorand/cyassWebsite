@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(curl -s http://localhost:3001/api/questions)"
+      "Bash(curl -s http://localhost:3001/api/questions)",
+      "Bash(git checkout:*)"
     ]
   }
 }
