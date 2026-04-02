@@ -83,7 +83,7 @@ Agent Pro subscription available at R499/month for unlimited reports.
 
 CONTRACTOR
 Who they are: Builders, plumbers, electricians, and other tradespeople.
-Why they use CYA Pro: Document repair and maintenance work with before/after evidence for quoting and sign-off.
+Why they use CYA Pro: Document repair and maintenance work with before/after evidence for quoting and sign-off. Contractors also receive job invitations via shareable links from property owners and agents. They sign up in 3 steps via the browser (no app download required), document work with before/during/after photos, upload compliance certificates for regulated trades, and can build professional profiles with trade registrations and accreditations.
 Free reports: 2.
 Agent Pro subscription available at R499/month for unlimited reports.
 
@@ -270,6 +270,23 @@ All data auto-saves every 1.5 seconds. There is no manual "save" button needed.
 
 TEAM MANAGEMENT (Agents and Contractors only)
 Invite team members by email (up to 3 included with Agent Pro). Team members share the owner's subscription and can create unlimited reports. If an invited email has not signed up yet, they auto-link to the team on signup.
+
+CONTRACTOR JOBS
+Property owners and agents can create maintenance and repair jobs directly from the app. They select a property, choose from 14 trade types, set the urgency level, and describe the work needed. A shareable invite link is generated which can be sent to a contractor via WhatsApp, email, or any messaging platform. The contractor clicks the link, signs up in 3 simple steps, and is automatically linked to the job. No app download is required -- everything works in the browser.
+
+14 Trade Types: Electrician, Gas Installer, Plumber, Builder, Painter, Tiler, Roofer, Carpenter, Locksmith, Pest Control, Waterproofer, Glazier, General Maintenance, Other.
+
+Each trade has specific job types. For example, Electrician jobs include: fix lights, install geyser, fault finding, rewire, DB board, issue electrical CoC.
+
+4 Urgency Levels: Low, Medium, High, Critical.
+
+Job Status Lifecycle: Not Started → In Progress → Completed. Additional statuses: Awaiting Parts, Cancelled.
+
+Photo Documentation: Contractors must upload before photos (required) and after photos (required). During photos are optional. All photos are timestamped.
+
+Certificate Requirements: 5 job types require compliance certificate uploads before a job can be marked as completed: Electrical CoC, Gas CoC, Plumbing/Water CoC, Electric Fence CoC, Beetle/Pest Certificate.
+
+Contractor Profiles: Contractors can build professional profiles including business name, mobile, province, town/city, service radius, primary and secondary trades, professional registrations (ECA, ECB, SAQCC Gas, PIRB, ECSA, SACAP, NHBRC, FPASA), certificates they can issue, documents they can provide (quotations, warranties, completion certificates), emergency callout availability, and base callout fee.
 
 REPORT STATUS LIFECYCLE
 Reports progress through these stages:
@@ -486,6 +503,27 @@ A: The PDF is generated on the client side (in your browser), so it is nearly in
 
 Q: What is the report status lifecycle?
 A: Reports go through these stages: Draft (actively editing), Completed (all rooms inspected, still editable), Finalized (locked and immutable), Paid (payment confirmed, PDF accessible).
+
+Q: What are Contractor Jobs?
+A: Property owners and agents can create maintenance or repair jobs and invite contractors via a shareable link (WhatsApp, email, etc.). Contractors click the link, sign up in 3 steps, and can start documenting work immediately in their browser. No app download needed.
+
+Q: How do I invite a contractor to a job?
+A: Create a job in the app, then share the generated invite link via WhatsApp, email, or any messaging platform. The contractor clicks the link, creates an account in 3 steps, and is automatically linked to the job.
+
+Q: Does the contractor need to download an app?
+A: No. Contractors sign up and manage their jobs entirely through the web browser. No app download is required.
+
+Q: What trade types are available for contractor jobs?
+A: There are 14 trade types: Electrician, Gas Installer, Plumber, Builder, Painter, Tiler, Roofer, Carpenter, Locksmith, Pest Control, Waterproofer, Glazier, General Maintenance, and Other.
+
+Q: Do contractors need to upload certificates?
+A: For 5 regulated job types (electrical, gas, plumbing, electric fence, and beetle), contractors must upload the relevant compliance certificate before marking a job as completed. Other job types do not require certificates.
+
+Q: What are the job statuses?
+A: Jobs move through: Not Started, In Progress, Completed. Additional statuses include Awaiting Parts and Cancelled.
+
+Q: Can contractors also do property inspections?
+A: Yes. Contractors get 2 free inspection reports and can create property condition reports just like any other user. The job management features are in addition to inspections.
 
 
 14. CONTACT AND SUPPORT

@@ -218,7 +218,7 @@
         <div class="role-card" data-select-role="contractor">
           <div class="role-card__icon"><span class="mi">construction</span></div>
           <h3>Contractors</h3>
-          <p>Document repairs with before/after evidence for quoting and sign-off.</p>
+          <p>Get invited to jobs, document work with before/during/after photos, upload compliance certificates, and build a professional profile.</p>
         </div>
       </div>
     </div>
@@ -326,7 +326,7 @@
       buyer: 'Buyers inspect a property before transfer to identify defects, risks, and compliance issues.',
       seller: 'Sellers document property condition to support transparency and avoid legal disputes.',
       agent: 'Agents conduct inspections to support transactions and provide professional reports.',
-      contractor: 'Contractors inspect and document repairs, maintenance, and before/after work.'
+      contractor: 'Contractors get invited to maintenance and repair jobs via shareable links. They sign up in 3 steps, document work with before/during/after photos, upload compliance certificates for regulated trades, and build professional profiles with registrations and accreditations.'
     };
 
     var data = [
@@ -344,7 +344,7 @@
       ['Safety Systems','O','Y','Y','Y','Y','Y'],
       ['Marketing Photos','-','-','O','Y','Y','-'],
       ['Repair Recommendations','-','Y','Y','O','Y','Y'],
-      ['Before/After Repairs','-','O','O','O','O','Y'],
+      ['Before/During/After Photos','-','O','O','O','O','Y'],
       ['Electrical COC','-','O','Y','Y','Y','Y'],
       ['Gas COC','-','O','Y','Y','Y','Y'],
       ['Plumbing COC','-','O','Y','Y','Y','Y'],
@@ -353,7 +353,10 @@
       ['Electric Fence Certificate','-','O','Y','Y','Y','Y'],
       ['Building Plans','-','O','Y','Y','Y','O'],
       ['Occupation Certificate','-','O','Y','Y','Y','O'],
-      ['Warranty Documents','-','O','O','O','O','Y']
+      ['Warranty Documents','-','O','O','O','O','Y'],
+      ['Certificate Uploads (COC)','-','-','-','-','-','Y'],
+      ['Professional Profile','-','-','-','-','-','Y'],
+      ['Job Status Tracking','-','Y','-','-','Y','Y']
     ];
 
     function getDisplay(val) { return val === 'Y' ? 'Yes' : val === 'O' ? 'Optional' : 'N/A'; }
